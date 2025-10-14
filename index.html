@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sakura Nail Spa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Sakura Nail Spa</h1>
+      <p class="subtitle">Favorite nail spa in downtown Montreal </p>
+      <p class="subtitle">Cool and Long-lasting design </p>
+      <p class="subtitle-fr">Élégance inspirée de la beauté japonaise</p>
+      <div class="btn-group">
+        <a href="#services" class="btn">💅 Our Services</a>
+        <a href="#booking" class="btn">📅 Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Our Services / Nos Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Classic Manicure</h3>
+          <p>Natural nail care for everyday elegance.</p>
+        </div>
+        <div class="service-card">
+          <h3>Gel Nails</h3>
+          <p>Long-lasting beauty with flawless shine.</p>
+        </div>
+        <div class="service-card">
+          <h3>Nail Art</h3>
+          <p>Personalized designs with a creative touch.</p>
+        </div>
+        <div class="service-card">
+          <h3>Hand Spa Treatments</h3>
+          <p>Luxurious spa therapies for your hands.</p>
+        </div>
+        <div class="service-card">
+          <h3>Japanese Nail Care</h3>
+          <p>Traditional techniques for naturally beautiful nails.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery / Galerie</h2>
+      <div class="gallery">
+        <img src="assets/images/nail1.jpg" alt="Elegant nails 1" />
+        <img src="assets/images/nail2.jpg" alt="Elegant nails 2" />
+        <img src="assets/images/nail3.jpg" alt="Elegant nails 3" />
+        <img src="assets/images/nail4.jpg" alt="Elegant nails 4" />
+      </div>
+    </section>
+
+    <section id="booking">
+      <h2>Book Now / Réservez Maintenant</h2>
+      <form class="booking-form" id="spaBookingForm">
+        <div class="form-row">
+          <input type="text" name="name" required placeholder="Name / Nom" />
+          <input type="email" name="email" required placeholder="Email" />
+        </div>
+    
+        <div class="form-row">
+          <input type="tel" name="phone" required placeholder="Phone / Téléphone" />
+          <select name="service" required>
+            <option value="">Service</option>
+            <option value="Classic Manicure">Classic Manicure</option>
+            <option value="Gel Nails">Gel Nails</option>
+            <option value="Nail Art">Nail Art</option>
+            <option value="Hand Spa Treatments">Hand Spa Treatments</option>
+            <option value="Japanese Nail Care">Japanese Nail Care</option>
+          </select>
+        </div>
+    
+        <div class="form-row">
+          <input type="date" name="date" required />
+        </div>
+    
+        <textarea name="message" rows="3" placeholder="Notes (optional)"></textarea>
+    
+        <button type="submit" class="btn-large">📅 Confirm Booking</button>
+        <p class="form-success-message" style="display:none;">🎉 Thank you! We'll contact you soon.</p>
+      </form>
+    </section>
+    
+    
+
+    <section id="contact">
+      <h2>Contact / Nous contacter</h2>
+      <p>Address: 300 Sherbrooke West, Montreal, Quebec</p>
+      <p>Email: <a href="mailto:contact@sakura-nails.com">contact@sakura-nails.com</a></p>
+      <p>Phone: +33 6 12 34 56 78</p>
+      <p>Instagram: <a href="https://instagram.com/sakura.nails">@sakura.nails</a></p>
+    </section>
+  </main>
+  <section id="location">
+    <h2>Our Location / Notre Localisation</h2>
+    <p>Find us easily and explore nearby conveniences.</p>
+  
+    <div class="map-container">
+      <iframe 
+      src="https://www.google.com/maps/d/embed?mid=1CGsIIJeKZJ7qilLuQzUNo1tKnE_doSg&ehbc=2E312F&noprof=1" width="640" height="480"
+        width="100%" 
+        height="450" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Shakura Nail Spa. Designed with love and elegance.</p>
+  </footer>
+
+  <script src="sakura.js"></script>
+  <a href="#booking" class="floating-book-btn">📅 Book Now</a>
+  <script>
+    const form = document.getElementById('spaBookingForm');
+    const successMessage = document.querySelector('.form-success-message');
+  
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Simulate successful form submission
+      form.reset();
+      successMessage.style.display = 'block';
+  
+      // Hide the success message after 4 seconds (optional)
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 4000);
+    });
+  </script>
+  
+</body>
+</html>
