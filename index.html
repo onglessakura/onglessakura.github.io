@@ -191,20 +191,39 @@
     </section>
     -->
   </main>
-  <section id="location">
-    <h2>Notre Localisation | Our Location </h2>
-    <p>Trouvez-nous facilement et explorez les commodités à proximité.</p>
-  
-    <div class="map-container">
-      <iframe 
-      src="https://www.google.com/maps/d/embed?mid=1bHoT0EP__Rl_4ae14xxcE_weCtFx1LM&ehbc=2E312F" width="640" height="480"
-        width="100%" 
-        height="450" 
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
-    </div>
-  </section>
+<section id="location">
+  <h2>Notre Localisation | Our Location</h2>
+  <p>Trouvez-nous facilement et explorez les commodités à proximité.</p>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/d/embed?mid=1bHoT0EP__Rl_4ae14xxcE_weCtFx1LM&ehbc=2E312F"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<style>
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px; /* optional: rounded corners */
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
   
   <footer>
     <p>&copy; 2025 Ongles Sakura Spa. Conçu avec amour et élégance. </p>
@@ -232,6 +251,7 @@
   
 </body>
 </html>
+
 
 
 
