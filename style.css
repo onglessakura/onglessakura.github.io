@@ -17,6 +17,7 @@ body {
   line-height: 1.6;
 }
 
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -346,6 +347,61 @@ footer {
 @media (max-width: 600px) {
   .form-row {
     flex-direction: column;
+  }
+}
+
+/* ============================= */
+/* HERO – MOBILE OPTIMIZATION   */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: auto;
+    min-height: 85vh;
+    padding: 1.5rem 1rem;
+  }
+
+  .overlay {
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .hero .subtitle:nth-of-type(2),
+  .hero .subtitle:nth-of-type(3) {
+    opacity: 0.9;
   }
 }
 
