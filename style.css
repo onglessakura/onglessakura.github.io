@@ -438,57 +438,51 @@ footer {
 }
 
 /* Service Card compact layout */
+/* -------- Compact Services Section -------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem; /* tighter spacing between cards */
+  justify-items: center;
+}
+
 .service-card {
-  background: #fff0f5;
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem; /* reduce padding inside cards */
+  max-width: 280px;
   width: 100%;
-  max-width: 300px;
-  text-align: center;
 }
 
-/* Titles */
 .service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.8rem;
-  color: #B45F8C;
+  font-size: 1.15rem; /* slightly smaller title */
+  margin-bottom: 0.5rem;
 }
 
-/* Handle empty <p> spacing uniformly */
 .service-card p {
-  font-size: 0.95rem;
-  color: #6b4b5a;
-  margin: 4px 0;
-  min-height: 18px; /* Keeps empty lines consistent */
+  font-size: 0.9rem;
+  margin: 2px 0; /* reduce vertical spacing for each paragraph */
+  min-height: 16px; /* keeps empty <p> consistent */
 }
 
-/* Hover effect */
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-/* Mobile adjustments */
+/* Mobile adjustments for compact layout */
 @media (max-width: 600px) {
   .services-grid {
-    grid-template-columns: 1fr; /* Single column for small screens */
-    gap: 1rem;
+    grid-template-columns: 1fr; /* single column on small screens */
+    gap: 0.8rem;
   }
 
   .service-card {
-    max-width: 100%;
-    padding: 1.2rem;
+    padding: 0.8rem;
   }
 
   .service-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .service-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
+
+
 
 
