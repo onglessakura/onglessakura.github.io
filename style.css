@@ -438,50 +438,74 @@ footer {
 }
 
 /* Service Card compact layout */
-/* -------- Compact Services Section -------- */
+/* Services Section */
+#services {
+  padding: 2.5rem 1.5rem; /* reduced padding */
+}
+
+/* Section Title */
+#services h2 {
+  font-size: 1.8rem; /* smaller than hero */
+  margin-bottom: 1.5rem;
+  color: #B45F8C;
+  font-weight: 600;
+}
+
+/* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem; /* tighter spacing between cards */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem; /* tighter spacing */
   justify-items: center;
 }
 
+/* Service Card */
 .service-card {
-  padding: 1rem; /* reduce padding inside cards */
-  max-width: 280px;
+  background: #fff0f5;
+  padding: 1rem; /* reduced padding */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   width: 100%;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card h3 {
-  font-size: 1.15rem; /* slightly smaller title */
+  font-size: 1.1rem; /* smaller than before */
   margin-bottom: 0.5rem;
+  color: #6b4b5a;
 }
 
-.service-card p {
-  font-size: 0.9rem;
-  margin: 2px 0; /* reduce vertical spacing for each paragraph */
-  min-height: 16px; /* keeps empty <p> consistent */
+/* Hover effect */
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Mobile adjustments for compact layout */
+/* Mobile adjustments */
 @media (max-width: 600px) {
+  #services h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
   .services-grid {
-    grid-template-columns: 1fr; /* single column on small screens */
+    grid-template-columns: 1fr; /* single column */
     gap: 0.8rem;
   }
 
   .service-card {
+    max-width: 100%;
     padding: 0.8rem;
   }
 
   .service-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .service-card p {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
+
+
 
 
 
