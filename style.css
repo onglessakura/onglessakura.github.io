@@ -441,16 +441,18 @@ footer {
 /* Services Section */
 /* Services Section */
 #services {
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* less top padding */
+  padding-top: 0.1rem; /* smaller top padding */
+  padding-bottom: 1.5rem;
 }
 
 /* Section Title */
 #services h2 {
   margin-top: 0; /* remove extra top margin */
-  font-size: 1.8rem; /* keep proportional */
-  margin-bottom: 1.5rem;
+  font-size: 1.7rem; /* smaller and proportional to hero */
+  line-height: 1.2; /* tighter spacing for two rows */
   color: #B45F8C;
   font-weight: 600;
+  text-align: center;
 }
 
 /* Services Grid */
@@ -506,6 +508,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
