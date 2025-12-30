@@ -405,3 +405,26 @@ footer {
   }
 }
 
+/* Square booking button refinement */
+.square-book-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #f4a7b9, #ea00ff);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .square-book-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+}
+
