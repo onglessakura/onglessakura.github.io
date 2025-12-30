@@ -440,13 +440,13 @@ footer {
 /* Service Card compact layout */
 /* Services Section */
 #services {
-  padding: 2.5rem 1.5rem; /* reduced padding */
+  padding: 1.0rem 0.5rem; /* reduced padding */
 }
 
 /* Section Title */
 #services h2 {
   font-size: 1.8rem; /* smaller than hero */
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.rem;
   color: #B45F8C;
   font-weight: 600;
 }
@@ -455,14 +455,14 @@ footer {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem; /* tighter spacing */
+  gap: 0.8rem; /* tighter spacing */
   justify-items: center;
 }
 
 /* Service Card */
 .service-card {
   background: #fff0f5;
-  padding: 1rem; /* reduced padding */
+  padding: 0.8rem; /* reduced padding */
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   width: 100%;
@@ -472,7 +472,7 @@ footer {
 }
 
 .service-card h3 {
-  font-size: 1.1rem; /* smaller than before */
+  font-size: 1.rem; /* smaller than before */
   margin-bottom: 0.5rem;
   color: #6b4b5a;
 }
@@ -504,6 +504,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
