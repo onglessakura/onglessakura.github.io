@@ -439,14 +439,16 @@ footer {
 
 /* Service Card compact layout */
 /* Services Section */
+/* Services Section */
 #services {
-  padding: 1.0rem 0.5rem; /* reduced padding */
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem; /* less top padding */
 }
 
 /* Section Title */
 #services h2 {
-  font-size: 1.8rem; /* smaller than hero */
-  margin-bottom: 1.rem;
+  margin-top: 0; /* remove extra top margin */
+  font-size: 1.8rem; /* keep proportional */
+  margin-bottom: 1.5rem;
   color: #B45F8C;
   font-weight: 600;
 }
@@ -504,6 +506,7 @@ footer {
     font-size: 1rem;
   }
 }
+
 
 
 
