@@ -573,21 +573,7 @@ body {
   font-weight: 600;
 }
 
-.booking-wrapper {
-  height: 2000px;       /* visible area */
-  overflow: hidden;
-  position: relative;
-}
-.booking-wrapper iframe {
-  position: relative;
-  top: -350px;
-}
 
-@media (max-width: 768px) {
-  .booking-wrapper iframe {
-    top: -5px;
-  }
-}
 
 
 
