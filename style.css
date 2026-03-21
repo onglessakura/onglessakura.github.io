@@ -580,12 +580,12 @@ body {
 }
 .booking-wrapper iframe {
   position: relative;
-  top: -1000px;
+  top: -700px;
 }
 
 @media (max-width: 768px) {
   .booking-wrapper iframe {
-    top: -1000px;
+    top: -700px;
   }
 }
 
