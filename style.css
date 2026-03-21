@@ -573,6 +573,11 @@ body {
   font-weight: 600;
 }
 
+.booking-wrapper {
+  height: 900px;       /* visible area */
+  overflow: hidden;
+  position: relative;
+}
 .booking-wrapper iframe {
   position: relative;
   top: -1000px;
