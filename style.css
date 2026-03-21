@@ -574,18 +574,18 @@ body {
 }
 
 .booking-wrapper {
-  height: 900px;       /* visible area */
+  height: 2000px;       /* visible area */
   overflow: hidden;
   position: relative;
 }
 .booking-wrapper iframe {
   position: relative;
-  top: -700px;
+  top: -500px;
 }
 
 @media (max-width: 768px) {
   .booking-wrapper iframe {
-    top: -700px;
+    top: -500px;
   }
 }
 
