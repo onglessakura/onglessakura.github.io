@@ -39,9 +39,9 @@
   {%- assign cat_list = cats | split: "," -%}
   {%- if cat_list.size > 1 %}
   <div class="g-filters" role="group" aria-label="{{ t.nav_gallery }}">
-    <button class="chip is-active" data-filter="all">{{ t.gallery_filter_all }}</button>
+    <button class="chip is-active" type="button" aria-pressed="true" data-filter="all">{{ t.gallery_filter_all }}</button>
     {%- for c in cat_list %}
-    <button class="chip" data-filter="{{ c }}">{{ g.categories[c][lang] | default: c | capitalize }}</button>
+    <button class="chip" type="button" aria-pressed="false" data-filter="{{ c }}">{{ g.categories[c][lang] | default: c | capitalize }}</button>
     {%- endfor %}
   </div>
   {%- endif %}

@@ -29,6 +29,8 @@ business:
   country: CA
   metro: Place-des-Arts
   booking_url: https://onglessakura.setmore.com
+  # Setmore page embedded in the "Réservation" section (leave "" to hide the section)
+  booking_embed_url: https://onglessakura.setmore.com/#reviews
   instagram: https://www.instagram.com/onglessakura
   # Paste your Google Maps share link and "Get more reviews" link here:
   google_maps_url: https://www.google.com/maps/search/?api=1&query=Ongles+Sakura+Spa+300+Sherbrooke+Ouest+Montreal
@@ -39,8 +41,8 @@ business:
     - days: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
       opens: "10:00"
       closes: "19:00"
-  hours_display_fr: "Tous les jours · 10 h – 19 h"
-  hours_display_en: "Every day · 10 am – 7 pm"
+  hours_display_fr: "Tous les jours · 10 h – 19 h"
+  hours_display_en: "Every day · 10 am – 7 pm"
 
 # ── Google Analytics 4 / Search Console (paste IDs when you have them) ──
 google_analytics: ""          # e.g. G-XXXXXXXXXX
@@ -48,13 +50,13 @@ google_analytics: ""          # e.g. G-XXXXXXXXXX
 #   google: "xxxxxxxx"
 
 # ── Optional announcement bar (leave text empty to hide) ──
+#    e.g. holidays:  fr: "🎉 Bonne année ! Fermé le 1er janvier"
 announcement:
-  fr: "Offre étudiants · Happy hours de 10 h à 12 h"
-  en: "Student special · Happy hours 10 am – 12 pm"
+  fr: "🎓 Offre étudiants · Happy hours de 10 h à 12 h"
+  en: "🎓 Student special · Happy hours 10 am – 12 pm"
 
 # ── Blog ──
 permalink: /blog/:year/:title/
-paginate: false
 
 # ── Plugins (all supported natively by GitHub Pages) ──
 plugins:

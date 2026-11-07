@@ -1,7 +1,8 @@
 # Services shown on the home page (FR + EN).
+# emoji: the icon shown on the card (same symbol style as the original site)
 # To add prices later, add a `price:` line to any item, e.g.  price: "45 $"
 - id: manicure
-  icon: hand
+  emoji: "💅"
   fr:
     name: Manucure
     text: Soin complet des mains et des cuticules, mise en forme et finition impeccable.
@@ -12,7 +13,7 @@
     items: [Classic manicure, Regular or gel polish, BIAB / Bio gel, Russian manicure, Dipping powder]
 
 - id: pedicure
-  icon: foot
+  emoji: "👣"
   fr:
     name: Pédicure
     text: Bain relaxant, soin des cuticules, exfoliation et vernis longue tenue.
@@ -23,7 +24,7 @@
     items: [Classic pedicure, Spa pedicure, Regular or gel polish]
 
 - id: extensions
-  icon: sparkle
+  emoji: "✨"
   fr:
     name: Extensions d'ongles
     text: Longueur et forme sur mesure, du naturel élégant au nail art détaillé.
@@ -34,7 +35,7 @@
     items: [Full set, Refill, Custom nail art]
 
 - id: lashes
-  icon: eye
+  emoji: "👁️"
   fr:
     name: Cils
     text: Extensions de cils posées avec précision pour un regard naturellement sublimé.
@@ -45,7 +46,7 @@
     items: [Lash extensions, Refill]
 
 - id: headspa
-  icon: lotus
+  emoji: "💆‍♀️"
   fr:
     name: Head Spa
     text: Rituel japonais de nettoyage et de massage du cuir chevelu, profondément relaxant.
@@ -56,7 +57,7 @@
     items: [Scalp cleanse, Head massage, Hair treatment]
 
 - id: waxing
-  icon: leaf
+  emoji: "🌿"
   fr:
     name: Épilation & fil
     text: Épilation à la cire et au fil, visage et sourcils, en douceur.
@@ -67,7 +68,7 @@
     items: [Waxing, Eyebrow threading, Face threading]
 
 - id: massage
-  icon: drop
+  emoji: "🦶"
   fr:
     name: Massage des pieds
     text: Un moment de détente pour soulager les jambes et les pieds fatigués.
@@ -78,7 +79,7 @@
     items: [Foot massage, Leg & foot massage]
 
 - id: custom
-  icon: star
+  emoji: "🌸"
   fr:
     name: Services personnalisés
     text: Une occasion spéciale ? Composons ensemble votre soin sur mesure.

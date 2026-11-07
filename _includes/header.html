@@ -1,28 +1,37 @@
 {%- assign b = site.business -%}
 {%- if page.alt_url -%}{%- assign switch_url = page.alt_url -%}{%- elsif lang == 'fr' -%}{%- assign switch_url = '/en/' -%}{%- else -%}{%- assign switch_url = '/' -%}{%- endif -%}
-{%- if site.announcement[lang] != "" and site.announcement[lang] -%}
+{%- if lang == 'fr' -%}{%- assign other = 'en' -%}{%- else -%}{%- assign other = 'fr' -%}{%- endif -%}
+{%- if site.announcement[lang] and site.announcement[lang] != "" %}
 <div class="announce">
-  <span>{{ site.announcement[lang] }}</span>
+  <a href="{{ t.home_url | relative_url }}#promotion">{{ site.announcement[lang] }}</a>
 </div>
 {%- endif %}
 <header class="site-header" data-header>
   <div class="container header-inner">
-    <a class="brand" href="{{ t.home_url | relative_url }}" aria-label="Ongles Sakura Spa">
+    <a class="brand" href="{{ t.home_url | relative_url }}" aria-label="Ongles Sakura Spa — {{ t.lang_name }}">
       {% include logo.html %}
       <span class="brand-text">Ongles Sakura<small>Spa · Montréal</small></span>
     </a>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <ul>
+    <nav class="nav" id="site-nav" aria-label="{{ t.menu }}">
+      <ul class="nav-links">
         <li><a href="{{ t.home_url | relative_url }}#services">{{ t.nav_services }}</a></li>
         <li><a href="{{ t.gallery_url | relative_url }}">{{ t.nav_gallery }}</a></li>
         <li><a href="{{ '/blog/' | relative_url }}">{{ t.nav_blog }}</a></li>
         <li><a href="{{ t.home_url | relative_url }}#contact">{{ t.nav_contact }}</a></li>
-        <li class="nav-lang"><a href="{{ switch_url | relative_url }}" hreflang="{% if lang == 'fr' %}en{% else %}fr{% endif %}" lang="{% if lang == 'fr' %}en{% else %}fr{% endif %}" aria-label="{{ t.other_lang_label }}">{{ t.other_lang }}</a></li>
+        <li class="nav-lang"><a href="{{ switch_url | relative_url }}" hreflang="{{ other }}" lang="{{ other }}" aria-label="{{ t.other_lang_label }}">{{ t.other_lang }}</a></li>
       </ul>
-      <a class="btn btn-dark nav-book" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }}</a>
+      <a class="btn btn-dark nav-book" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book_long }}</a>
+      <div class="nav-extra">
+        <a href="tel:{{ b.phone }}" data-track="call_click">📞 {{ b.phone_display }}</a>
+        <a href="{{ b.google_maps_url }}" target="_blank" rel="noopener">📍 {{ b.street }}</a>
+        <a href="{{ b.instagram }}" target="_blank" rel="noopener">Instagram @onglessakura</a>
+      </div>
     </nav>
-    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
-      <span class="sr-only">{{ t.menu }}</span><span class="bar"></span><span class="bar"></span>
-    </button>
+    <div class="header-actions">
+      <a class="header-lang" href="{{ switch_url | relative_url }}" hreflang="{{ other }}" lang="{{ other }}" aria-label="{{ t.other_lang_label }}">{{ t.other_lang }}</a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+        <span class="sr-only">{{ t.menu }}</span><span class="bar bar-1"></span><span class="bar bar-2"></span>
+      </button>
+    </div>
   </div>
 </header>

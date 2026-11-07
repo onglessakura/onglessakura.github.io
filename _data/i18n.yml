@@ -25,7 +25,7 @@ fr:
   services_title: Des soins pensés dans le moindre détail
   services_lead: Du soin classique au rituel complet, chaque service est réalisé avec précision et douceur.
   offer_eyebrow: Offre étudiants
-  offer_title: Happy hours de 10 h à 12 h
+  offer_title: Happy hours de 10 h à 12 h
   offer_text: Présentez votre carte étudiante et profitez de nos tarifs spéciaux en matinée.
   gallery_eyebrow: Galerie
   gallery_title: Les créations de nos clientes
@@ -43,6 +43,10 @@ fr:
   journal_all: Tous les articles
   read_more: Lire l'article
   min_read: min de lecture
+  booking_eyebrow: Réservation
+  booking_title: Réservez votre moment
+  booking_lead: Choisissez votre soin et l'heure qui vous convient — en ligne, en quelques clics. Vous préférez parler à quelqu'un ? Appelez-nous au 438 936-8898.
+  booking_open: Ouvrir dans un nouvel onglet
   visit_eyebrow: Nous visiter
   visit_title: Au cœur du centre-ville
   address: Adresse
@@ -54,13 +58,13 @@ fr:
   faq_title: Bon à savoir avant votre visite
   reviews_strip: Votre avis compte — découvrez ce que nos clientes disent de nous sur Google.
   faq:
-    - q: Où se trouve Ongles Sakura Spa ?
+    - q: Où se trouve Ongles Sakura Spa ?
       a: Au 300, rue Sherbrooke Ouest, à quelques minutes à pied du métro Place-des-Arts, au centre-ville de Montréal.
-    - q: Comment prendre rendez-vous ?
+    - q: Comment prendre rendez-vous ?
       a: Réservez en ligne en tout temps grâce à notre système de réservation, ou appelez-nous au 438 936-8898.
-    - q: Avez-vous une offre pour les étudiants ?
-      a: Oui ! Profitez de nos happy hours étudiants de 10 h à 12 h. Présentez votre carte étudiante valide lors de votre visite.
-    - q: Quels services offrez-vous ?
+    - q: Avez-vous une offre pour les étudiants ?
+      a: Oui ! Profitez de nos happy hours étudiants de 10 h à 12 h. Présentez votre carte étudiante valide lors de votre visite.
+    - q: Quels services offrez-vous ?
       a: Manucure, pédicure, extensions d'ongles, extensions de cils, head spa, épilation à la cire et au fil, massage des pieds et services personnalisés.
   footer_tagline: Salon d'ongles & spa beauté au centre-ville de Montréal.
   footer_rights: Tous droits réservés.
@@ -99,7 +103,7 @@ en:
   services_title: Treatments crafted down to the last detail
   services_lead: From classic care to a full ritual, every service is performed with precision and care.
   offer_eyebrow: Student special
-  offer_title: Happy hours 10 am – 12 pm
+  offer_title: Happy hours 10 am – 12 pm
   offer_text: Show your student card and enjoy special morning rates.
   gallery_eyebrow: Gallery
   gallery_title: Our clients' looks
@@ -117,6 +121,10 @@ en:
   journal_all: All articles
   read_more: Read article
   min_read: min read
+  booking_eyebrow: Booking
+  booking_title: Reserve your moment
+  booking_lead: Choose your service and a time that suits you — online, in a few clicks. Prefer to talk to someone? Call us at 438-936-8898.
+  booking_open: Open in a new tab
   visit_eyebrow: Visit us
   visit_title: In the heart of downtown
   address: Address
@@ -133,7 +141,7 @@ en:
     - q: How do I book an appointment?
       a: Book online anytime through our booking system, or call us at 438-936-8898.
     - q: Do you have a student offer?
-      a: Yes! Enjoy our student happy hours from 10 am to 12 pm. Please bring a valid student card.
+      a: Yes! Enjoy our student happy hours from 10 am to 12 pm. Please bring a valid student card.
     - q: What services do you offer?
       a: Manicures, pedicures, nail extensions, eyelash extensions, head spa, waxing and threading, foot massage and personalized services.
   footer_tagline: Nail salon & beauty spa in downtown Montréal.
