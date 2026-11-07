@@ -1,0 +1,11 @@
+{%- assign b = site.business -%}{%- assign rg = b.ratings.google -%}{%- assign rs = b.ratings.setmore -%}
+<section class="trust" aria-label="{{ t.reviews_eyebrow }}">
+  <ul class="container trust-list">
+    <li><a href="{{ rg.url }}" target="_blank" rel="noopener"><span class="trust-stars" aria-hidden="true">★★★★★</span><strong>{% include score.html s=rg.score %}</strong><span>{{ rg.count }} {{ t.trust_google }}</span></a></li>
+    <li><a href="{{ rs.url }}" target="_blank" rel="noopener"><span class="trust-stars" aria-hidden="true">★★★★★</span><strong>{% include score.html s=rs.score %}</strong><span>{{ rs.count }} {{ t.trust_setmore }}</span></a></li>
+    <li class="trust-break" aria-hidden="true"></li>
+    <li class="attr"><span class="trust-ico" aria-hidden="true">◇</span><span>{{ t.seven_days }}</span></li>
+    {%- if b.women_owned %}<li class="attr"><span class="trust-ico" aria-hidden="true">◇</span><span>{{ t.trust_women }}</span></li>{% endif %}
+    {%- if b.lgbtq_friendly %}<li class="attr"><span class="trust-ico" aria-hidden="true">◇</span><span>{{ t.trust_lgbtq }}</span></li>{% endif %}
+  </ul>
+</section>

@@ -30,19 +30,46 @@ business:
   metro: Place-des-Arts
   booking_url: https://onglessakura.setmore.com
   # Setmore page embedded in the "Réservation" section (leave "" to hide the section)
-  booking_embed_url: https://onglessakura.setmore.com/#reviews
+  booking_embed_url: ""      # was https://onglessakura.setmore.com/#reviews (embed removed for speed)
   instagram: https://www.instagram.com/onglessakura
   # Paste your Google Maps share link and "Get more reviews" link here:
-  google_maps_url: https://www.google.com/maps/search/?api=1&query=Ongles+Sakura+Spa+300+Sherbrooke+Ouest+Montreal
+  google_maps_url: https://maps.google.com/?cid=18003722729717811053   # your Google Business Profile
   google_review_url: ""      # e.g. https://g.page/r/XXXXXXXX/review
   price_range: "$$"
-  # ⚠ Please confirm these hours — they are used by Google (schema.org).
+  # Review scores shown on the site — update them every month or two.
+  ratings:
+    google:  { score: "5.0", count: 186, url: "https://maps.google.com/?cid=18003722729717811053" }
+    setmore: { score: "4.9", count: 247, url: "https://onglessakura.setmore.com/#reviews" }
+  # Attributes listed on the Google Business Profile
+  women_owned: true
+  lgbtq_friendly: true
+  storefront_photo: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9StKtu_IB0Z6jkc3E-fNKSr5wHRiXstuFv7MklQAyR2bLQcmUYYRj6nN5-pQqsmtZ6uBqt01e-uDbJ_1ie8q-jsc7cXNMTOoH7Sgzb25xOHyhhdNiMyiG6sZpEANuxyy6aIQgRvTAH5nZI"
+  # Opening hours — same as the Google Business Profile (checked Nov 2026).
+  # Used on the page, in the "open now" badge and in Google's structured data.
+  # If you change them here, change them on Google too (and vice-versa).
   hours:
-    - days: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+    - days: [Monday, Tuesday, Wednesday]
+      fr: Lundi – Mercredi
+      en: Monday – Wednesday
+      fr_short: Lun – Mer
+      en_short: Mon – Wed
       opens: "10:00"
       closes: "19:00"
-  hours_display_fr: "Tous les jours · 10 h – 19 h"
-  hours_display_en: "Every day · 10 am – 7 pm"
+    - days: [Thursday, Friday]
+      fr: Jeudi – Vendredi
+      en: Thursday – Friday
+      fr_short: Jeu – Ven
+      en_short: Thu – Fri
+      opens: "10:00"
+      closes: "20:00"
+    - days: [Saturday, Sunday]
+      fr: Samedi – Dimanche
+      en: Saturday – Sunday
+      fr_short: Sam – Dim
+      en_short: Sat – Sun
+      opens: "10:00"
+      closes: "18:00"
+  geo: { lat: 45.5087058, lng: -73.5708915 }
 
 # ── Google Analytics 4 / Search Console (paste IDs when you have them) ──
 google_analytics: ""          # e.g. G-XXXXXXXXXX

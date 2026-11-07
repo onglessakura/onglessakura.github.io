@@ -1,0 +1,7 @@
+{%- comment -%} Weekly hours table from _config.yml → business.hours {%- endcomment -%}
+<ul class="hours {{ include.class }}">
+  {%- for h in site.business.hours %}
+  {%- assign sk = lang | append: '_short' %}
+  <li><span><span class="d-long">{{ h[lang] }}</span><span class="d-short">{{ h[sk] }}</span></span><span>{% include time.html t=h.opens %} – {% include time.html t=h.closes %}</span></li>
+  {%- endfor %}
+</ul>

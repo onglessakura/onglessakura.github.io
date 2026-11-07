@@ -6,13 +6,22 @@ Jekyll site hosted free on GitHub Pages. Everything below can be done from the G
 
 | I want to… | Edit this |
 |---|---|
-| Change phone, hours, address, booking link | `_config.yml` → `business:` |
+| Change phone, address, booking link | `_config.yml` → `business:` |
+| Change opening hours | `_config.yml` → `business: hours:`. Keep them identical to Google Business Profile |
 | Show or hide the top banner (promos, holiday closures) | `_config.yml` → `announcement:` (leave `""` to hide) |
 | Edit services, or add prices | `_data/services.yml` (add `price: "45 $"` lines if you want) |
+| Change a service icon | `icon:` in `_data/services.yml`. Choices: polish, basin, almond, lashes, lotus, sprig, stones, diamond |
 | Edit FAQ and other page text | `_data/i18n.yml` (`fr:` and `en:`) |
-| Add Google reviews to the home page | `_data/reviews.yml` |
+| Update review scores (Google 5.0 / Setmore 4.9) | `_config.yml` → `business: ratings:` (refresh every month or two) |
+| Change the client quotes | `_data/reviews.yml` (copy word for word, first name + initial) |
+| Show the Setmore booking page inside the site again | `_config.yml` → `booking_embed_url:` |
 
 ## Add gallery photos
+The home page shows the gallery once there are **4 or more photos**. It currently holds 11 photos from @onglessakura on Instagram (in `assets/gallery/ongles/` and `assets/gallery/cils/`), shown in the category order set in `_data/gallery.yml`. Inside a folder, files are sorted by name, so the `01-`, `02-` prefixes control the order.
+
+**Option A: photos you uploaded to Google (owner photos).** Open a photo on Google Maps, right-click → *Copy image address*, delete the `=w…` ending, and paste it under `remote:` in `_data/gallery.yml`.
+
+**Option B: upload files** (best quality and speed):
 1. Open `assets/gallery/` on GitHub, then the folder `ongles/`, `cils/`, `pieds/` or `salon/` (create it if needed: *Add file → Upload files*).
 2. Upload your photos. **Give the files descriptive names**, e.g. `manucure-gel-rose-nude.jpg`. The file name becomes the image's alt text for Google.
 3. Commit. The photo appears on the gallery page and the home page within a minute or two.
@@ -20,6 +29,8 @@ Jekyll site hosted free on GitHub Pages. Everything below can be done from the G
 Tip: run `python3 tools/optimize_images.py <your folder> assets/gallery/ongles` first. It makes the photos about 10× smaller and removes GPS data.
 
 ## Write a blog post
+Good topics for the Journal are general ones that build trust: hygiene standards, nail health and aftercare, style inspiration, seasonal colours, occasions (weddings, holidays, events). Aim for 1–2 posts a month.
+
 1. Go to `_posts/` → *Add file → Create new file*.
 2. Name it `YYYY-MM-DD-short-title.md`, for example `2026-12-01-ongles-de-noel.md`.
 3. Paste this at the top, then write your post below it in plain text or Markdown:

@@ -1,0 +1,4 @@
+{%- comment -%} Formats "19:00" as "19 h" (fr) or "7 pm" (en). Usage: {% include time.html t="19:00" %} {%- endcomment -%}
+{%- assign _p = include.t | split: ":" -%}{%- assign _h = _p[0] | plus: 0 -%}{%- assign _m = _p[1] -%}
+{%- if lang == 'fr' -%}{{ _h }} h{% if _m != "00" %} {{ _m }}{% endif %}
+{%- else -%}{%- if _h > 12 -%}{%- assign _h12 = _h | minus: 12 -%}{%- elsif _h == 0 -%}{%- assign _h12 = 12 -%}{%- else -%}{%- assign _h12 = _h -%}{%- endif -%}{{ _h12 }}{% if _m != "00" %}:{{ _m }}{% endif %} {% if _h >= 12 %}pm{% else %}am{% endif %}{%- endif -%}

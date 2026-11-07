@@ -28,7 +28,7 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","{{ site.google_analytics }}");</script>
   {%- endif %}
 </head>
-<body class="{{ page.body_class }}">
+<body class="{{ page.body_class }}" data-lang="{{ lang }}">
   <a class="skip-link" href="#main">{% if lang == 'fr' %}Aller au contenu{% else %}Skip to content{% endif %}</a>
   {% include header.html %}
   <main id="main">

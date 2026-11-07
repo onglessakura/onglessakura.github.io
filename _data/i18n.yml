@@ -35,7 +35,20 @@ fr:
   gallery_filter_all: Tout
   instagram_follow: Suivre @onglessakura
   reviews_eyebrow: Avis
-  reviews_title: Elles en parlent mieux que nous
+  trust_google: avis Google
+  trust_setmore: avis Setmore
+  trust_women: Entreprise dirigée par des femmes
+  trust_lgbtq: Accueillant LGBTQ+
+  trust_metro: Métro Place-des-Arts
+  reviews_lead: Une note parfaite sur Google. Voici ce que nos clientes disent de leur visite.
+  reviews_read_all: Lire les avis sur Google
+  reviews_out_of: sur 5
+  booking_step1: Choisissez votre soin
+  booking_step2: Choisissez le jour et l'heure
+  booking_step3: Recevez votre confirmation
+  booking_online: Réservation en ligne 24 h sur 24
+  storefront_alt: Façade d'Ongles Sakura Spa, 300 rue Sherbrooke Ouest, Montréal
+  reviews_title: La confiance de nos clientes
   reviews_google: Lire nos avis Google
   reviews_leave: Laisser un avis
   journal_eyebrow: Journal
@@ -45,12 +58,13 @@ fr:
   min_read: min de lecture
   booking_eyebrow: Réservation
   booking_title: Réservez votre moment
-  booking_lead: Choisissez votre soin et l'heure qui vous convient — en ligne, en quelques clics. Vous préférez parler à quelqu'un ? Appelez-nous au 438 936-8898.
+  booking_lead: Réservez en ligne en moins d'une minute, à toute heure. Vous préférez parler à quelqu'un ? Appelez-nous pendant nos heures d'ouverture.
   booking_open: Ouvrir dans un nouvel onglet
   visit_eyebrow: Nous visiter
   visit_title: Au cœur du centre-ville
   address: Adresse
   hours: Heures
+  seven_days: Ouvert 7 jours sur 7
   phone: Téléphone
   email: Courriel
   directions: Itinéraire
@@ -113,7 +127,20 @@ en:
   gallery_filter_all: All
   instagram_follow: Follow @onglessakura
   reviews_eyebrow: Reviews
-  reviews_title: In our clients' words
+  trust_google: Google reviews
+  trust_setmore: Setmore reviews
+  trust_women: Women-owned business
+  trust_lgbtq: LGBTQ+ friendly
+  trust_metro: Place-des-Arts metro
+  reviews_lead: A perfect score on Google. Here's what our clients say about their visit.
+  reviews_read_all: Read the reviews on Google
+  reviews_out_of: out of 5
+  booking_step1: Choose your service
+  booking_step2: Pick a day and time
+  booking_step3: Get your confirmation
+  booking_online: Online booking 24/7
+  storefront_alt: Ongles Sakura Spa storefront, 300 Sherbrooke Street West, Montréal
+  reviews_title: Trusted by our clients
   reviews_google: Read our Google reviews
   reviews_leave: Leave a review
   journal_eyebrow: Journal
@@ -123,12 +150,13 @@ en:
   min_read: min read
   booking_eyebrow: Booking
   booking_title: Reserve your moment
-  booking_lead: Choose your service and a time that suits you — online, in a few clicks. Prefer to talk to someone? Call us at 438-936-8898.
+  booking_lead: Book online in under a minute, any time of day. Prefer to talk to someone? Call us during opening hours.
   booking_open: Open in a new tab
   visit_eyebrow: Visit us
   visit_title: In the heart of downtown
   address: Address
   hours: Hours
+  seven_days: Open 7 days a week
   phone: Phone
   email: Email
   directions: Directions

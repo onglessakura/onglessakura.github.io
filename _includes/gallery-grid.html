@@ -7,19 +7,22 @@
 {%- assign count = 0 -%}
 {%- assign cats = "" -%}
 {%- capture tiles -%}
+{%- comment -%} Category order follows _data/gallery.yml → categories; files sorted by name inside each folder {%- endcomment -%}
+{%- for c in g.categories -%}
+{%- assign ckey = c[0] -%}
+{%- assign cprefix = "/assets/gallery/" | append: ckey | append: "/" -%}
 {%- for f in site.static_files -%}
-  {%- if f.path contains "/assets/gallery/" -%}
+  {%- if f.path contains cprefix -%}
   {%- assign ext = f.extname | downcase -%}
   {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".webp" or ext == ".png" or ext == ".avif" -%}
   {%- if count < limit -%}
-    {%- assign parts = f.path | split: "/" -%}
-    {%- if parts.size > 4 -%}{%- assign cat = parts[3] -%}{%- else -%}{%- assign cat = "salon" -%}{%- endif -%}
+    {%- assign cat = ckey -%}
     {%- unless cats contains cat -%}{%- assign cats = cats | append: cat | append: "," -%}{%- endunless -%}
     {%- assign cap = g.captions[f.name][lang] -%}
     {%- if cap == nil or cap == "" -%}{%- assign cap = f.basename | replace: "-", " " | replace: "_", " " | capitalize -%}{%- endif -%}
     <figure class="g-item" data-cat="{{ cat }}">
       <a href="{{ f.path | relative_url }}" data-lightbox data-caption="{{ cap | escape }}">
-        <img src="{{ f.path | relative_url }}" alt="{{ cap | escape }} — Ongles Sakura Spa Montréal" loading="lazy" decoding="async">
+        <img src="{{ f.path | relative_url }}" alt="{{ cap | escape }} — Ongles Sakura Spa Montréal" width="640" height="640" loading="lazy" decoding="async">
       </a>
     </figure>
     {%- assign count = count | plus: 1 -%}
@@ -27,9 +30,24 @@
   {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
+{%- endfor -%}
+{%- for r in g.remote -%}
+  {%- if count < limit -%}
+    {%- assign cat = r.cat | default: "salon" -%}
+    {%- unless cats contains cat -%}{%- assign cats = cats | append: cat | append: "," -%}{%- endunless -%}
+    {%- assign cap = r[lang] | default: r.fr -%}
+    <figure class="g-item" data-cat="{{ cat }}">
+      <a href="{{ r.url }}=w1800-h1800-k-no" data-lightbox data-caption="{{ cap | escape }}">
+        <img src="{{ r.url }}=w700-h875-p-k-no" alt="{{ cap | escape }} — Ongles Sakura Spa Montréal" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      </a>
+    </figure>
+    {%- assign count = count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
 {%- endcapture -%}
 
-{%- if count == 0 %}
+{%- assign min_count = include.min | default: 1 -%}
+{%- if count < min_count %}
 <div class="gallery-empty">
   <p>{{ t.gallery_empty }}</p>
   <a class="btn btn-line" href="{{ site.business.instagram }}" target="_blank" rel="noopener">{{ t.instagram_follow }}</a>

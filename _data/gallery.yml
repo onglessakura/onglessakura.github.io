@@ -19,7 +19,46 @@ categories:
   pieds:  { fr: Pédicure, en: Pedicure }
   salon:  { fr: Le salon, en: The salon }
 
+# Photos hosted on your Google Business Profile (owner uploads only).
+# Paste the image address (without the "=w…" part at the end) and a description.
+remote:
+  - url: "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9StKtu_IB0Z6jkc3E-fNKSr5wHRiXstuFv7MklQAyR2bLQcmUYYRj6nN5-pQqsmtZ6uBqt01e-uDbJ_1ie8q-jsc7cXNMTOoH7Sgzb25xOHyhhdNiMyiG6sZpEANuxyy6aIQgRvTAH5nZI"
+    cat: salon
+    fr: Notre façade au 300, rue Sherbrooke Ouest
+    en: Our storefront at 300 Sherbrooke Street West
+
 captions:
-  # manucure-gel-rose-nude.jpg:
-  #   fr: Manucure gel rose nude, finition brillante
-  #   en: Nude-pink gel manicure, glossy finish
+  # Photos from @onglessakura on Instagram (posted by the salon).
+  01-nail-art-automne-vert-chrome.jpg:
+    fr: "Nail art d'automne, vert sauge et chrome"
+    en: "Autumn nail art in sage green and chrome"
+  02-nail-art-peche-pois-rayures.jpg:
+    fr: "Nail art pêche, pois et rayures"
+    en: "Peach nail art with dots and stripes"
+  03-nail-art-bordeaux-fleurs.jpg:
+    fr: "Bordeaux et noir, fleurs et petits cœurs"
+    en: "Burgundy and black with florals and hearts"
+  04-french-chocolat-carre.jpg:
+    fr: "French chocolat, forme carrée"
+    en: "Chocolate French tips, square shape"
+  05-effet-chrome-etoiles-dorees.jpg:
+    fr: "Effet chrome et étoiles dorées"
+    en: "Chrome effect with gold stars"
+  06-nail-art-bleu-nuit.jpg:
+    fr: "Bleu nuit et détails graphiques"
+    en: "Midnight blue with graphic details"
+  07-french-blanche-amande.jpg:
+    fr: "French blanche classique, forme amande"
+    en: "Classic white French, almond shape"
+  08-effet-perle-amande.jpg:
+    fr: "Effet perlé, forme amande"
+    en: "Pearl glazed almond nails"
+  09-rose-nude-amande.jpg:
+    fr: "Rose nude brillant, forme amande"
+    en: "Glossy nude pink, almond shape"
+  10-degrade-baby-boomer-amande.jpg:
+    fr: "Dégradé baby boomer, forme amande"
+    en: "Baby boomer ombré, almond shape"
+  01-cils-sublimes.jpg:
+    fr: "Cils sublimés, regard naturel"
+    en: "Beautifully enhanced natural lashes"

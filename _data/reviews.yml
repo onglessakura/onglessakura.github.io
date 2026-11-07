@@ -1,7 +1,33 @@
-# Paste REAL reviews from your Google Business Profile here (copy them word for word,
-# first name + last initial only). They appear on the home page automatically.
-# - name: Marie L.
-#   stars: 5
-#   lang: fr
-#   text: "Texte exact de l'avis Google…"
-[]
+# Real client reviews, copied word for word from Google / Setmore (Nov 2026).
+# Shorten with "…" if needed, never reword. First name + initial only.
+# They show on the home page (in this order — put the most detailed first).
+- name: Eloise
+  stars: 5
+  lang: en
+  source: Google
+  text: "I’ve been here multiple times now and I am never disappointed! Very friendly and talented and hardworking staff, efficient and always just what I want. The nails last very well in time too!"
+- name: J. Z.
+  stars: 5
+  lang: en
+  source: Google
+  text: "Lovely nail salon! Everyone there is welcoming and easy to talk to. The atmosphere is very calm and relaxing, which is nice as a break from busy life."
+- name: Helena F.
+  stars: 5
+  lang: fr
+  source: Setmore
+  text: "Super ambiance et personnel accueillant 😊"
+- name: Erika V.
+  stars: 5
+  lang: en
+  source: Google
+  text: "Amazing experience… so pleased with the perfected job that I made my way back on Sunday to get a second service… Highly recommend and will be putting this in my itinerary every time I visit!"
+- name: Melanie D.
+  stars: 5
+  lang: en
+  source: Google
+  text: "Visiting from out of town, this location was conveniently located and they were able to get me and my daughter in on short notice."
+- name: Véronique D.
+  stars: 5
+  lang: fr
+  source: Google
+  text: "Super ! Je recommande !"

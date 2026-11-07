@@ -8,7 +8,7 @@
     <div>
       <h2 class="footer-h">{{ t.visit_eyebrow }}</h2>
       <p>{{ b.street }}<br>{{ b.city }} ({{ b.region }}) {{ b.postal }}</p>
-      <p class="muted">{% if lang == 'fr' %}{{ b.hours_display_fr }}{% else %}{{ b.hours_display_en }}{% endif %}</p>
+      {% include hours.html class="hours-footer" %}
     </div>
     <div>
       <h2 class="footer-h">{{ t.nav_contact }}</h2>

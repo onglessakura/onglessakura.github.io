@@ -161,6 +161,36 @@
     start();
   }
 
+  /* Live "open now" badge — computed in Montréal time from _config.yml hours */
+  const statusEls = $$("[data-open-status]");
+  if (statusEls.length) {
+    const fr = (document.body.dataset.lang || "fr") === "fr";
+    const L = fr
+      ? { open: "Ouvert maintenant", closes: "ferme à", closed: "Fermé", today: "ouvre aujourd’hui à", tomorrow: "ouvre demain à" }
+      : { open: "Open now", closes: "closes at", closed: "Closed", today: "opens today at", tomorrow: "opens tomorrow at" };
+    const fmt = (t) => {
+      const [h, m] = t.split(":").map(Number);
+      if (fr) return `${h}\u00a0h${m ? " " + String(m).padStart(2, "0") : ""}`;
+      const h12 = h % 12 || 12;
+      return `${h12}${m ? ":" + String(m).padStart(2, "0") : ""}\u00a0${h >= 12 ? "pm" : "am"}`;
+    };
+    try {
+      const hours = JSON.parse(statusEls[0].dataset.hours);
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Toronto", weekday: "long", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+      const get = (k) => parts.find((p) => p.type === k).value;
+      const day = get("weekday"), now = Number(get("hour")) * 60 + Number(get("minute"));
+      const forDay = (d) => hours.find((h) => h.days.includes(d));
+      const mins = (t) => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+      const today = forDay(day), next = forDay(days[(days.indexOf(day) + 1) % 7]);
+      let text, open = false;
+      if (today && now >= mins(today.opens) && now < mins(today.closes)) { open = true; text = `${L.open} · ${L.closes} ${fmt(today.closes)}`; }
+      else if (today && now < mins(today.opens)) text = `${L.closed} · ${L.today} ${fmt(today.opens)}`;
+      else if (next) text = `${L.closed} · ${L.tomorrow} ${fmt(next.opens)}`;
+      if (text) statusEls.forEach((el) => { el.textContent = text; el.classList.add(open ? "is-open" : "is-closed"); });
+    } catch (e) { /* keep the static text */ }
+  }
+
   /* Conversion tracking hooks (active once Google Analytics 4 is configured) */
   $$("[data-track]").forEach((el) => el.addEventListener("click", () => {
     if (typeof window.gtag === "function") window.gtag("event", el.dataset.track, { link_url: el.href });
