@@ -1,0 +1,80 @@
+# ─────────────────────────────────────────────────────────────
+#  Ongles Sakura Spa — site settings
+#  Most day-to-day edits happen here and in _data/*.yml
+# ─────────────────────────────────────────────────────────────
+
+title: Ongles Sakura Spa
+tagline: Salon d'ongles & spa au centre-ville de Montréal
+description: >-
+  Salon d'ongles et spa beauté près du métro Place-des-Arts à Montréal :
+  manucure, pédicure, extensions d'ongles, cils, épilation, head spa et
+  épilation au fil. Espace propre, calme et hygiénique. Réservez en ligne.
+url: "https://onglessakura.com"
+baseurl: ""
+lang: fr_CA
+timezone: America/Toronto
+logo: /assets/img/logo.png
+image: /assets/img/og-image.jpg
+
+# ── Business info (used in header, footer, contact, and Google schema) ──
+business:
+  name: Ongles Sakura Spa
+  phone: "+1-438-936-8898"
+  phone_display: "438 936-8898"
+  email: onglessakuraspa@gmail.com
+  street: 300 Rue Sherbrooke Ouest
+  city: Montréal
+  region: QC
+  postal: H2X 1X9
+  country: CA
+  metro: Place-des-Arts
+  booking_url: https://onglessakura.setmore.com
+  instagram: https://www.instagram.com/onglessakura
+  # Paste your Google Maps share link and "Get more reviews" link here:
+  google_maps_url: https://www.google.com/maps/search/?api=1&query=Ongles+Sakura+Spa+300+Sherbrooke+Ouest+Montreal
+  google_review_url: ""      # e.g. https://g.page/r/XXXXXXXX/review
+  price_range: "$$"
+  # ⚠ Please confirm these hours — they are used by Google (schema.org).
+  hours:
+    - days: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+      opens: "10:00"
+      closes: "19:00"
+  hours_display_fr: "Tous les jours · 10 h – 19 h"
+  hours_display_en: "Every day · 10 am – 7 pm"
+
+# ── Google Analytics 4 / Search Console (paste IDs when you have them) ──
+google_analytics: ""          # e.g. G-XXXXXXXXXX
+# webmaster_verifications:     # uncomment + paste Search Console code
+#   google: "xxxxxxxx"
+
+# ── Optional announcement bar (leave text empty to hide) ──
+announcement:
+  fr: "Offre étudiants · Happy hours de 10 h à 12 h"
+  en: "Student special · Happy hours 10 am – 12 pm"
+
+# ── Blog ──
+permalink: /blog/:year/:title/
+paginate: false
+
+# ── Plugins (all supported natively by GitHub Pages) ──
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: /blog/feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values:
+      layout: post
+      lang: fr
+      author: Ongles Sakura Spa
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - tools/
+  - _preview/

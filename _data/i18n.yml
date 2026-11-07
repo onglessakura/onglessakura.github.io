@@ -1,0 +1,147 @@
+fr:
+  home_url: /
+  gallery_url: /galerie/
+  nav_services: Services
+  nav_gallery: Galerie
+  nav_blog: Journal
+  nav_contact: Contact
+  book: Réserver
+  book_long: Réserver en ligne
+  call: Appeler
+  menu: Menu
+  close: Fermer
+  hero_eyebrow: Centre-ville de Montréal · Métro Place-des-Arts
+  hero_h1_sub: Salon d'ongles & spa beauté au centre-ville de Montréal
+  hero_lead: Manucure, pédicure, cils, head spa et épilation dans un espace propre, calme et hygiénique — pensé pour que chaque visite soit un moment à vous.
+  hero_secondary: Découvrir nos soins
+  pillars:
+    - title: Hygiène
+      text: Un espace impeccable et des gestes soignés à chaque rendez-vous.
+    - title: Sérénité
+      text: Un cadre calme au cœur du centre-ville, pour vraiment décrocher.
+    - title: Savoir-faire
+      text: Des techniciennes attentives au détail, du classique au nail art.
+  services_eyebrow: Nos soins
+  services_title: Des soins pensés dans le moindre détail
+  services_lead: Du soin classique au rituel complet, chaque service est réalisé avec précision et douceur.
+  offer_eyebrow: Offre étudiants
+  offer_title: Happy hours de 10 h à 12 h
+  offer_text: Présentez votre carte étudiante et profitez de nos tarifs spéciaux en matinée.
+  gallery_eyebrow: Galerie
+  gallery_title: Les créations de nos clientes
+  gallery_lead: Un aperçu de notre travail. Suivez-nous sur Instagram pour nos dernières créations.
+  gallery_all: Voir toute la galerie
+  gallery_empty: Nos plus belles réalisations arrivent bientôt ici. En attendant, découvrez-les sur Instagram.
+  gallery_filter_all: Tout
+  instagram_follow: Suivre @onglessakura
+  reviews_eyebrow: Avis
+  reviews_title: Elles en parlent mieux que nous
+  reviews_google: Lire nos avis Google
+  reviews_leave: Laisser un avis
+  journal_eyebrow: Journal
+  journal_title: Conseils & inspirations
+  journal_all: Tous les articles
+  read_more: Lire l'article
+  min_read: min de lecture
+  visit_eyebrow: Nous visiter
+  visit_title: Au cœur du centre-ville
+  address: Adresse
+  hours: Heures
+  phone: Téléphone
+  email: Courriel
+  directions: Itinéraire
+  faq_eyebrow: Questions fréquentes
+  faq_title: Bon à savoir avant votre visite
+  reviews_strip: Votre avis compte — découvrez ce que nos clientes disent de nous sur Google.
+  faq:
+    - q: Où se trouve Ongles Sakura Spa ?
+      a: Au 300, rue Sherbrooke Ouest, à quelques minutes à pied du métro Place-des-Arts, au centre-ville de Montréal.
+    - q: Comment prendre rendez-vous ?
+      a: Réservez en ligne en tout temps grâce à notre système de réservation, ou appelez-nous au 438 936-8898.
+    - q: Avez-vous une offre pour les étudiants ?
+      a: Oui ! Profitez de nos happy hours étudiants de 10 h à 12 h. Présentez votre carte étudiante valide lors de votre visite.
+    - q: Quels services offrez-vous ?
+      a: Manucure, pédicure, extensions d'ongles, extensions de cils, head spa, épilation à la cire et au fil, massage des pieds et services personnalisés.
+  footer_tagline: Salon d'ongles & spa beauté au centre-ville de Montréal.
+  footer_rights: Tous droits réservés.
+  back_blog: Retour au journal
+  blog_title: Journal
+  blog_lead: Conseils d'entretien, tendances et inspirations de notre salon.
+  lang_name: Français
+  other_lang: EN
+  other_lang_label: English
+  date_months: [janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+
+en:
+  home_url: /en/
+  gallery_url: /en/gallery/
+  nav_services: Services
+  nav_gallery: Gallery
+  nav_blog: Journal
+  nav_contact: Contact
+  book: Book
+  book_long: Book online
+  call: Call
+  menu: Menu
+  close: Close
+  hero_eyebrow: Downtown Montréal · Place-des-Arts Metro
+  hero_h1_sub: Nail salon & beauty spa in downtown Montréal
+  hero_lead: Manicures, pedicures, lashes, head spa and waxing in a clean, calm and hygienic space — designed so every visit is a moment just for you.
+  hero_secondary: Explore our services
+  pillars:
+    - title: Hygiene
+      text: A spotless space and careful technique at every appointment.
+    - title: Serenity
+      text: A calm retreat in the heart of downtown, to truly unwind.
+    - title: Craft
+      text: Detail-minded technicians, from classic looks to nail art.
+  services_eyebrow: Our services
+  services_title: Treatments crafted down to the last detail
+  services_lead: From classic care to a full ritual, every service is performed with precision and care.
+  offer_eyebrow: Student special
+  offer_title: Happy hours 10 am – 12 pm
+  offer_text: Show your student card and enjoy special morning rates.
+  gallery_eyebrow: Gallery
+  gallery_title: Our clients' looks
+  gallery_lead: A glimpse of our work. Follow us on Instagram for our latest creations.
+  gallery_all: View the full gallery
+  gallery_empty: Our favourite work is coming here soon. In the meantime, see it on Instagram.
+  gallery_filter_all: All
+  instagram_follow: Follow @onglessakura
+  reviews_eyebrow: Reviews
+  reviews_title: In our clients' words
+  reviews_google: Read our Google reviews
+  reviews_leave: Leave a review
+  journal_eyebrow: Journal
+  journal_title: Tips & inspiration
+  journal_all: All articles
+  read_more: Read article
+  min_read: min read
+  visit_eyebrow: Visit us
+  visit_title: In the heart of downtown
+  address: Address
+  hours: Hours
+  phone: Phone
+  email: Email
+  directions: Directions
+  faq_eyebrow: FAQ
+  faq_title: Good to know before your visit
+  reviews_strip: Your opinion matters — see what our clients say about us on Google.
+  faq:
+    - q: Where is Ongles Sakura Spa located?
+      a: At 300 Sherbrooke Street West, a few minutes' walk from Place-des-Arts metro in downtown Montréal.
+    - q: How do I book an appointment?
+      a: Book online anytime through our booking system, or call us at 438-936-8898.
+    - q: Do you have a student offer?
+      a: Yes! Enjoy our student happy hours from 10 am to 12 pm. Please bring a valid student card.
+    - q: What services do you offer?
+      a: Manicures, pedicures, nail extensions, eyelash extensions, head spa, waxing and threading, foot massage and personalized services.
+  footer_tagline: Nail salon & beauty spa in downtown Montréal.
+  footer_rights: All rights reserved.
+  back_blog: Back to the journal
+  blog_title: Journal
+  blog_lead: Care tips, trends and inspiration from our salon.
+  lang_name: English
+  other_lang: FR
+  other_lang_label: Français
+  date_months: [January, February, March, April, May, June, July, August, September, October, November, December]

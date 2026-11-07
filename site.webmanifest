@@ -1,0 +1,8 @@
+{
+  "name": "Ongles Sakura Spa",
+  "short_name": "Sakura Spa",
+  "icons": [{ "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }],
+  "theme_color": "#F7F1EA",
+  "background_color": "#F7F1EA",
+  "display": "browser"
+}

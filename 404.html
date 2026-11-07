@@ -1,0 +1,19 @@
+---
+layout: default
+lang: fr
+title: Page introuvable
+permalink: /404.html
+sitemap: false
+---
+{%- assign lang = page.lang -%}{%- assign t = site.data.i18n[lang] -%}
+<section class="page-hero page-404">
+  <div class="container">
+    <p class="eyebrow">404</p>
+    <h1 class="h1">Cette page s'est envolée <em class="muted-em">comme un pétale.</em></h1>
+    <p class="lead narrow">This page has drifted away.</p>
+    <div class="hero-cta center-flex">
+      <a class="btn btn-dark" href="{{ '/' | relative_url }}">Accueil</a>
+      <a class="btn btn-line" href="{{ '/en/' | relative_url }}">Home (EN)</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+{%- assign b = site.business -%}
+{%- if page.alt_url -%}{%- assign switch_url = page.alt_url -%}{%- elsif lang == 'fr' -%}{%- assign switch_url = '/en/' -%}{%- else -%}{%- assign switch_url = '/' -%}{%- endif -%}
+{%- if site.announcement[lang] != "" and site.announcement[lang] -%}
+<div class="announce">
+  <span>{{ site.announcement[lang] }}</span>
+</div>
+{%- endif %}
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="{{ t.home_url | relative_url }}" aria-label="Ongles Sakura Spa">
+      {% include logo.html %}
+      <span class="brand-text">Ongles Sakura<small>Spa · Montréal</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="{{ t.home_url | relative_url }}#services">{{ t.nav_services }}</a></li>
+        <li><a href="{{ t.gallery_url | relative_url }}">{{ t.nav_gallery }}</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">{{ t.nav_blog }}</a></li>
+        <li><a href="{{ t.home_url | relative_url }}#contact">{{ t.nav_contact }}</a></li>
+        <li class="nav-lang"><a href="{{ switch_url | relative_url }}" hreflang="{% if lang == 'fr' %}en{% else %}fr{% endif %}" lang="{% if lang == 'fr' %}en{% else %}fr{% endif %}" aria-label="{{ t.other_lang_label }}">{{ t.other_lang }}</a></li>
+      </ul>
+      <a class="btn btn-dark nav-book" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }}</a>
+    </nav>
+    <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" data-nav-toggle>
+      <span class="sr-only">{{ t.menu }}</span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </div>
+</header>

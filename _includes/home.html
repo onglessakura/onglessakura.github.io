@@ -1,0 +1,191 @@
+{%- assign b = site.business -%}
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">{{ t.hero_eyebrow }}</p>
+      <h1 class="hero-title">
+        <span class="hero-brand">Ongles <em>Sakura</em></span>
+        <span class="hero-sub">{{ t.hero_h1_sub }}</span>
+      </h1>
+      <p class="lead">{{ t.hero_lead }}</p>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }}</a>
+        <a class="btn btn-line" href="#services">{{ t.hero_secondary }}</a>
+      </div>
+      <ul class="hero-meta">
+        <li>{% if lang == 'fr' %}{{ b.hours_display_fr }}{% else %}{{ b.hours_display_en }}{% endif %}</li>
+        <li><a href="tel:{{ b.phone }}" data-track="call_click">{{ b.phone_display }}</a></li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="hero-disc"></div>
+      <picture>
+        <source media="(max-width: 700px)" srcset="{{ '/assets/img/sakura-branch-900.webp' | relative_url }}">
+        <img src="{{ '/assets/img/sakura-branch.webp' | relative_url }}" alt="" width="1600" height="1361" fetchpriority="high">
+      </picture>
+    </div>
+  </div>
+  <canvas class="petals" data-petals aria-hidden="true"></canvas>
+</section>
+
+<!-- ═══ PILLARS ═══ -->
+<section class="pillars">
+  <div class="container pillars-grid">
+    {%- for p in t.pillars %}
+    <div class="pillar reveal">
+      <span class="pillar-num">0{{ forloop.index }}</span>
+      <h2 class="pillar-title">{{ p.title }}</h2>
+      <p>{{ p.text }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="section" id="services">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">{{ t.services_eyebrow }}</p>
+      <h2 class="h2">{{ t.services_title }}</h2>
+      <p class="lead narrow">{{ t.services_lead }}</p>
+    </header>
+    <div class="services">
+      {%- for s in site.data.services %}
+      {%- assign sv = s[lang] %}
+      <article class="service reveal" id="{{ s.id }}">
+        {% include icon.html name=s.icon %}
+        <h3>{{ sv.name }}</h3>
+        <p>{{ sv.text }}</p>
+        <ul>{% for i in sv.items %}<li>{{ i }}</li>{% endfor %}</ul>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="center"><a class="btn btn-dark" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }}</a></p>
+  </div>
+</section>
+
+<!-- ═══ OFFER ═══ -->
+<section class="offer" id="promotion">
+  <div class="container offer-inner reveal">
+    <p class="eyebrow eyebrow-light">{{ t.offer_eyebrow }}</p>
+    <h2 class="h2">{{ t.offer_title }}</h2>
+    <p>{{ t.offer_text }}</p>
+    <a class="btn btn-light" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book }}</a>
+  </div>
+</section>
+
+<!-- ═══ GALLERY PREVIEW ═══ -->
+<section class="section" id="galerie">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">{{ t.gallery_eyebrow }}</p>
+      <h2 class="h2">{{ t.gallery_title }}</h2>
+      <p class="lead narrow">{{ t.gallery_lead }}</p>
+    </header>
+    {% include gallery-grid.html limit=8 %}
+    <p class="center gap-top">
+      <a class="btn btn-line" href="{{ t.gallery_url | relative_url }}">{{ t.gallery_all }}</a>
+      <a class="link-quiet" href="{{ b.instagram }}" target="_blank" rel="noopener">{{ t.instagram_follow }}</a>
+    </p>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+{%- assign reviews = site.data.reviews | where: "lang", lang -%}
+{%- if reviews.size > 0 %}
+<section class="section section-tint">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">{{ t.reviews_eyebrow }}</p>
+      <h2 class="h2">{{ t.reviews_title }}</h2>
+    </header>
+    <div class="reviews">
+      {%- for r in reviews limit: 3 %}
+      <blockquote class="review reveal">
+        <div class="stars" aria-label="{{ r.stars }}/5">{% for s in (1..r.stars) %}★{% endfor %}</div>
+        <p>« {{ r.text }} »</p>
+        <footer>— {{ r.name }}<span>Google</span></footer>
+      </blockquote>
+      {%- endfor %}
+    </div>
+    <p class="center gap-top">
+      <a class="btn btn-line" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{{ t.reviews_google }}</a>
+      {%- if b.google_review_url != "" %}<a class="link-quiet" href="{{ b.google_review_url }}" target="_blank" rel="noopener">{{ t.reviews_leave }} →</a>{% endif %}
+    </p>
+  </div>
+</section>
+{%- else %}
+<section class="review-strip">
+  <div class="container review-strip-inner reveal">
+    <p class="stars-lg" aria-hidden="true">★★★★★</p>
+    <p class="review-strip-text">{{ t.reviews_strip }}</p>
+    <p>
+      <a class="btn btn-line" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{{ t.reviews_google }}</a>
+      {%- if b.google_review_url != "" %}<a class="link-quiet" href="{{ b.google_review_url }}" target="_blank" rel="noopener">{{ t.reviews_leave }} →</a>{% endif %}
+    </p>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ═══ JOURNAL ═══ -->
+{%- if site.posts.size > 0 %}
+<section class="section">
+  <div class="container">
+    <header class="section-head section-head-row reveal">
+      <div>
+        <p class="eyebrow">{{ t.journal_eyebrow }}</p>
+        <h2 class="h2">{{ t.journal_title }}</h2>
+      </div>
+      <a class="link-quiet" href="{{ '/blog/' | relative_url }}">{{ t.journal_all }} →</a>
+    </header>
+    <div class="posts">
+      {%- for post in site.posts limit: 3 %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ═══ VISIT ═══ -->
+<section class="section section-tint" id="contact">
+  <div class="container visit">
+    <div class="visit-info reveal">
+      <p class="eyebrow">{{ t.visit_eyebrow }}</p>
+      <h2 class="h2">{{ t.visit_title }}</h2>
+      <dl class="facts">
+        <div><dt>{{ t.address }}</dt><dd>{{ b.street }}<br>{{ b.city }} ({{ b.region }}) {{ b.postal }}<br><span class="muted">{% if lang == 'fr' %}Métro{% else %}Metro{% endif %} {{ b.metro }}</span></dd></div>
+        <div><dt>{{ t.hours }}</dt><dd>{% if lang == 'fr' %}{{ b.hours_display_fr }}{% else %}{{ b.hours_display_en }}{% endif %}</dd></div>
+        <div><dt>{{ t.phone }}</dt><dd><a href="tel:{{ b.phone }}" data-track="call_click">{{ b.phone_display }}</a></dd></div>
+        <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ b.email }}">{{ b.email }}</a></dd></div>
+      </dl>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }}</a>
+        <a class="btn btn-line" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{{ t.directions }}</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Google Maps — Ongles Sakura Spa" src="https://www.google.com/maps/d/embed?mid=1bHoT0EP__Rl_4ae14xxcE_weCtFx1LM&ehbc=2E312F" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section">
+  <div class="container narrow-wrap">
+    <header class="section-head reveal">
+      <p class="eyebrow">{{ t.faq_eyebrow }}</p>
+      <h2 class="h2">{{ t.faq_title }}</h2>
+    </header>
+    <div class="faq">
+      {%- for f in t.faq %}
+      <details class="reveal"{% if forloop.first %} open{% endif %}>
+        <summary>{{ f.q }}</summary>
+        <p>{{ f.a }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

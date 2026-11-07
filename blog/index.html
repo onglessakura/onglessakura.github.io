@@ -1,0 +1,23 @@
+---
+layout: default
+lang: fr
+title: Journal — conseils ongles, cils et soins beauté
+description: "Conseils d'entretien des ongles et des cils, tendances nail art et nouvelles d'Ongles Sakura Spa, salon d'ongles au centre-ville de Montréal."
+---
+{%- assign lang = page.lang -%}{%- assign t = site.data.i18n[lang] -%}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ t.journal_eyebrow }} · Journal</p>
+    <h1 class="h1">{{ t.journal_title }} <em class="muted-em">/ Tips &amp; inspiration</em></h1>
+    <p class="lead narrow">{{ t.blog_lead }}</p>
+  </div>
+</section>
+<section class="section section-flush">
+  <div class="container">
+    <div class="posts">
+      {%- for post in site.posts %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

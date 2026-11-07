@@ -1,0 +1,89 @@
+# Services shown on the home page (FR + EN).
+# To add prices later, add a `price:` line to any item, e.g.  price: "45 $"
+- id: manicure
+  icon: hand
+  fr:
+    name: Manucure
+    text: Soin complet des mains et des cuticules, mise en forme et finition impeccable.
+    items: [Manucure classique, Vernis régulier ou gel, BIAB / Bio gel, Manucure russe, Poudre trempée (dip)]
+  en:
+    name: Manicure
+    text: Complete hand and cuticle care, shaping and a flawless finish.
+    items: [Classic manicure, Regular or gel polish, BIAB / Bio gel, Russian manicure, Dipping powder]
+
+- id: pedicure
+  icon: foot
+  fr:
+    name: Pédicure
+    text: Bain relaxant, soin des cuticules, exfoliation et vernis longue tenue.
+    items: [Pédicure classique, Pédicure spa, Vernis régulier ou gel]
+  en:
+    name: Pedicure
+    text: Relaxing soak, cuticle care, exfoliation and long-lasting polish.
+    items: [Classic pedicure, Spa pedicure, Regular or gel polish]
+
+- id: extensions
+  icon: sparkle
+  fr:
+    name: Extensions d'ongles
+    text: Longueur et forme sur mesure, du naturel élégant au nail art détaillé.
+    items: [Pose complète, Remplissage, Nail art personnalisé]
+  en:
+    name: Nail Extensions
+    text: Custom length and shape, from understated elegance to detailed nail art.
+    items: [Full set, Refill, Custom nail art]
+
+- id: lashes
+  icon: eye
+  fr:
+    name: Cils
+    text: Extensions de cils posées avec précision pour un regard naturellement sublimé.
+    items: [Extensions de cils, Remplissage]
+  en:
+    name: Eyelashes
+    text: Precisely applied lash extensions for a naturally enhanced look.
+    items: [Lash extensions, Refill]
+
+- id: headspa
+  icon: lotus
+  fr:
+    name: Head Spa
+    text: Rituel japonais de nettoyage et de massage du cuir chevelu, profondément relaxant.
+    items: [Nettoyage du cuir chevelu, Massage crânien, Soin capillaire]
+  en:
+    name: Head Spa
+    text: A deeply relaxing Japanese-inspired scalp cleansing and massage ritual.
+    items: [Scalp cleanse, Head massage, Hair treatment]
+
+- id: waxing
+  icon: leaf
+  fr:
+    name: Épilation & fil
+    text: Épilation à la cire et au fil, visage et sourcils, en douceur.
+    items: [Épilation à la cire, Sourcils au fil, Visage au fil]
+  en:
+    name: Waxing & Threading
+    text: Gentle waxing and threading for brows, face and body.
+    items: [Waxing, Eyebrow threading, Face threading]
+
+- id: massage
+  icon: drop
+  fr:
+    name: Massage des pieds
+    text: Un moment de détente pour soulager les jambes et les pieds fatigués.
+    items: [Massage des pieds, Massage jambes & pieds]
+  en:
+    name: Foot Massage
+    text: A restorative moment for tired feet and legs.
+    items: [Foot massage, Leg & foot massage]
+
+- id: custom
+  icon: star
+  fr:
+    name: Services personnalisés
+    text: Une occasion spéciale ? Composons ensemble votre soin sur mesure.
+    items: [Occasions spéciales, Soins combinés]
+  en:
+    name: Personalized Services
+    text: A special occasion? Let's design a treatment just for you.
+    items: [Special occasions, Combined treatments]

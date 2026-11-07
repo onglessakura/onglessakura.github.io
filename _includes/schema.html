@@ -1,0 +1,43 @@
+{%- assign b = site.business -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "@id": "{{ site.url }}/#salon",
+  "name": {{ b.name | jsonify }},
+  "url": "{{ site.url }}/",
+  "image": "{{ site.image | absolute_url }}",
+  "logo": "{{ site.logo | absolute_url }}",
+  "telephone": {{ b.phone | jsonify }},
+  "email": {{ b.email | jsonify }},
+  "priceRange": {{ b.price_range | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ b.street | jsonify }},
+    "addressLocality": {{ b.city | jsonify }},
+    "addressRegion": {{ b.region | jsonify }},
+    "postalCode": {{ b.postal | jsonify }},
+    "addressCountry": {{ b.country | jsonify }}
+  },
+  "openingHoursSpecification": [{% for h in b.hours %}
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": {{ h.days | jsonify }}, "opens": "{{ h.opens }}", "closes": "{{ h.closes }}" }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],
+  "sameAs": [{{ b.instagram | jsonify }}],
+  "hasMap": {{ b.google_maps_url | jsonify }},
+  "potentialAction": { "@type": "ReserveAction", "target": {{ b.booking_url | jsonify }} },
+  "makesOffer": [{% for s in site.data.services %}
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": {{ s[lang].name | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{%- if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for f in t.faq %}
+    { "@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{%- endif %}

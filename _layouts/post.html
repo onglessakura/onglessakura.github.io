@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: "fr" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign m = page.date | date: "%-m" | minus: 1 -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign mins = words | divided_by: 200 | plus: 1 -%}
+<article class="post">
+  <header class="post-hero">
+    <div class="container narrow-wrap">
+      <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}">{{ t.journal_eyebrow }}</a></p>
+      <h1 class="h1">{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d" }} {{ t.date_months[m] }} {{ page.date | date: "%Y" }}</time>
+        · {{ mins }} {{ t.min_read }}
+      </p>
+    </div>
+  </header>
+  {%- if page.image %}
+  <figure class="container post-cover"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"></figure>
+  {%- endif %}
+  <div class="container narrow-wrap prose">
+    {{ content }}
+  </div>
+  <aside class="container narrow-wrap post-cta">
+    <div>
+      <p class="eyebrow">Ongles Sakura Spa</p>
+      <p class="post-cta-title">{% if lang == 'fr' %}Envie de passer à l'action ?{% else %}Ready for your next appointment?{% endif %}</p>
+    </div>
+    <a class="btn btn-dark" href="{{ site.business.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }}</a>
+  </aside>
+  <p class="container narrow-wrap"><a class="link-quiet" href="{{ '/blog/' | relative_url }}">← {{ t.back_blog }}</a></p>
+</article>

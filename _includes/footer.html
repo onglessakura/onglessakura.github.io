@@ -1,0 +1,30 @@
+{%- assign b = site.business -%}
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand brand-footer" href="{{ t.home_url | relative_url }}">{% include logo.html %}<span class="brand-text">Ongles Sakura<small>Spa · Montréal</small></span></a>
+      <p class="muted">{{ t.footer_tagline }}</p>
+    </div>
+    <div>
+      <h2 class="footer-h">{{ t.visit_eyebrow }}</h2>
+      <p>{{ b.street }}<br>{{ b.city }} ({{ b.region }}) {{ b.postal }}</p>
+      <p class="muted">{% if lang == 'fr' %}{{ b.hours_display_fr }}{% else %}{{ b.hours_display_en }}{% endif %}</p>
+    </div>
+    <div>
+      <h2 class="footer-h">{{ t.nav_contact }}</h2>
+      <p><a href="tel:{{ b.phone }}" data-track="call_click">{{ b.phone_display }}</a><br>
+      <a href="mailto:{{ b.email }}">{{ b.email }}</a><br>
+      <a href="{{ b.instagram }}" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <div>
+      <h2 class="footer-h">{{ t.menu }}</h2>
+      <p><a href="{{ t.home_url | relative_url }}#services">{{ t.nav_services }}</a><br>
+      <a href="{{ t.gallery_url | relative_url }}">{{ t.nav_gallery }}</a><br>
+      <a href="{{ '/blog/' | relative_url }}">{{ t.nav_blog }}</a></p>
+    </div>
+  </div>
+  <div class="container footer-base">
+    <span>© {{ site.time | date: "%Y" }} {{ b.name }}. {{ t.footer_rights }}</span>
+    <a href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{{ t.book_long }} →</a>
+  </div>
+</footer>

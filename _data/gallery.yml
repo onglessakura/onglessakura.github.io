@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────────────
+#  GALLERY — how it works
+#  1. Drop photos into a sub-folder of  assets/gallery/
+#       assets/gallery/ongles/   → Nails
+#       assets/gallery/cils/     → Lashes
+#       assets/gallery/pieds/    → Pedicure
+#       assets/gallery/salon/    → The salon
+#  2. Name files descriptively (this becomes the image alt text for Google):
+#       manucure-gel-rose-nude.jpg   →  "manucure gel rose nude"
+#  3. (Optional) add a nicer caption / alt text below, keyed by file name.
+#  Photos appear automatically — no code to edit.
+#  Tip: run  python3 tools/optimize_images.py  before uploading
+#       (resizes to 1600px and makes files ~10x smaller).
+# ─────────────────────────────────────────────────────────────
+
+categories:
+  ongles: { fr: Ongles, en: Nails }
+  cils:   { fr: Cils, en: Lashes }
+  pieds:  { fr: Pédicure, en: Pedicure }
+  salon:  { fr: Le salon, en: The salon }
+
+captions:
+  # manucure-gel-rose-nude.jpg:
+  #   fr: Manucure gel rose nude, finition brillante
+  #   en: Nude-pink gel manicure, glossy finish

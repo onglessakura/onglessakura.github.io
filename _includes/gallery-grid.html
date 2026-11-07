@@ -1,0 +1,52 @@
+{%- comment -%}
+  Usage: {% include gallery-grid.html limit=8 filters=true %}
+  Builds the gallery automatically from every image inside /assets/gallery/
+{%- endcomment -%}
+{%- assign g = site.data.gallery -%}
+{%- assign limit = include.limit | default: 999 -%}
+{%- assign count = 0 -%}
+{%- assign cats = "" -%}
+{%- capture tiles -%}
+{%- for f in site.static_files -%}
+  {%- if f.path contains "/assets/gallery/" -%}
+  {%- assign ext = f.extname | downcase -%}
+  {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".webp" or ext == ".png" or ext == ".avif" -%}
+  {%- if count < limit -%}
+    {%- assign parts = f.path | split: "/" -%}
+    {%- if parts.size > 4 -%}{%- assign cat = parts[3] -%}{%- else -%}{%- assign cat = "salon" -%}{%- endif -%}
+    {%- unless cats contains cat -%}{%- assign cats = cats | append: cat | append: "," -%}{%- endunless -%}
+    {%- assign cap = g.captions[f.name][lang] -%}
+    {%- if cap == nil or cap == "" -%}{%- assign cap = f.basename | replace: "-", " " | replace: "_", " " | capitalize -%}{%- endif -%}
+    <figure class="g-item" data-cat="{{ cat }}">
+      <a href="{{ f.path | relative_url }}" data-lightbox data-caption="{{ cap | escape }}">
+        <img src="{{ f.path | relative_url }}" alt="{{ cap | escape }} — Ongles Sakura Spa Montréal" loading="lazy" decoding="async">
+      </a>
+    </figure>
+    {%- assign count = count | plus: 1 -%}
+  {%- endif -%}
+  {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+
+{%- if count == 0 %}
+<div class="gallery-empty">
+  <p>{{ t.gallery_empty }}</p>
+  <a class="btn btn-line" href="{{ site.business.instagram }}" target="_blank" rel="noopener">{{ t.instagram_follow }}</a>
+</div>
+{%- else %}
+  {%- if include.filters %}
+  {%- assign cat_list = cats | split: "," -%}
+  {%- if cat_list.size > 1 %}
+  <div class="g-filters" role="group" aria-label="{{ t.nav_gallery }}">
+    <button class="chip is-active" data-filter="all">{{ t.gallery_filter_all }}</button>
+    {%- for c in cat_list %}
+    <button class="chip" data-filter="{{ c }}">{{ g.categories[c][lang] | default: c | capitalize }}</button>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+  {%- endif %}
+<div class="gallery" data-gallery>
+  {{ tiles }}
+</div>
+{%- endif %}
