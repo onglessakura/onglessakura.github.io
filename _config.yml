@@ -79,8 +79,8 @@ google_analytics: ""          # e.g. G-XXXXXXXXXX
 # ── Optional announcement bar (leave text empty to hide) ──
 #    e.g. holidays:  fr: "🎉 Bonne année ! Fermé le 1er janvier"
 announcement:
-  fr: "🎓 Offre étudiants · Happy hours de 10 h à 12 h"
-  en: "🎓 Student special · Happy hours 10 am – 12 pm"
+  fr: "Offre étudiants · Happy hours de 10 h à 12 h"
+  en: "Student special · Happy hours 10 am – 12 pm"
 
 # ── Blog ──
 permalink: /blog/:year/:title/

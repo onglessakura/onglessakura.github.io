@@ -36,8 +36,8 @@
   </main>
   {% include footer.html %}
   <nav class="mobile-bar" aria-label="{{ t.book }}" data-mobile-bar>
-    <a class="mobile-bar-call" href="tel:{{ site.business.phone }}" data-track="call_click"><span aria-hidden="true">📞</span>{{ t.call }}</a>
-    <a class="mobile-bar-book" href="{{ site.business.booking_url }}" target="_blank" rel="noopener" data-track="book_click"><span aria-hidden="true">📅</span>{{ t.book_long }}</a>
+    <a class="mobile-bar-call" href="tel:{{ site.business.phone }}" data-track="call_click">{% include ui-icon.html name="phone" %}{{ t.call }}</a>
+    <a class="mobile-bar-book" href="{{ site.business.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
   </nav>
   <div class="lightbox" data-lightbox-root hidden></div>
   <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>

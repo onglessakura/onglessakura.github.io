@@ -7,13 +7,13 @@
     <div class="hero-copy">
       <p class="eyebrow">{{ t.hero_eyebrow }}</p>
       <h1 class="hero-title">
-        <span class="hero-brand">Ongles <em>Sakura</em> <span class="hero-flower" aria-hidden="true">🌸</span></span>
+        <span class="hero-brand"><span class="hb-line">Ongles</span> <span class="hb-line"><em>Sakura</em><span class="hero-flower" aria-hidden="true">🌸</span></span></span>
         <span class="hero-sub">{{ t.hero_h1_sub }}</span>
       </h1>
       <p class="lead">{{ t.hero_lead }}</p>
       <div class="hero-cta">
-        <a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book_long }}</a>
-        <a class="btn btn-line" href="#services"><span class="emo" aria-hidden="true">💅</span>{{ t.hero_secondary }}</a>
+        <a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
+        <a class="btn btn-line" href="#services">{% include ui-icon.html name="sparkle" %}{{ t.hero_secondary }}</a>
       </div>
       {%- assign rg = b.ratings.google %}
       <a class="hero-rating" href="{{ rg.url }}" target="_blank" rel="noopener">
@@ -56,7 +56,7 @@
 <section class="section" id="services">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow"><span class="emo" aria-hidden="true">💅</span>{{ t.services_eyebrow }}</p>
+      <p class="eyebrow">{% include ui-icon.html name="nail" %}{{ t.services_eyebrow }}</p>
       <h2 class="h2">{{ t.services_title }}</h2>
       <p class="lead narrow">{{ t.services_lead }}</p>
     </header>
@@ -77,18 +77,18 @@
       </details>
       {%- endfor %}
     </div>
-    <p class="center"><a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book_long }}</a></p>
+    <p class="center"><a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a></p>
   </div>
 </section>
 
 <!-- ═══ OFFER ═══ -->
 <section class="offer" id="promotion">
   <div class="container offer-inner reveal">
-    <p class="offer-emoji" aria-hidden="true">🎓</p>
+    <p class="offer-emoji">{% include ui-icon.html name="cap" %}</p>
     <p class="eyebrow eyebrow-light">{{ t.offer_eyebrow }}</p>
     <h2 class="h2">{{ t.offer_title }}</h2>
     <p>{{ t.offer_text }}</p>
-    <a class="btn btn-light" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book }}</a>
+    <a class="btn btn-light" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book }}</a>
   </div>
 </section>
 
@@ -99,7 +99,7 @@
 <section class="section" id="galerie">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow"><span class="emo" aria-hidden="true">✨</span>{{ t.gallery_eyebrow }}</p>
+      <p class="eyebrow">{% include ui-icon.html name="sparkle" %}{{ t.gallery_eyebrow }}</p>
       <h2 class="h2">{{ t.gallery_title }}</h2>
       <p class="lead narrow">{{ t.gallery_lead }}</p>
     </header>
@@ -134,7 +134,7 @@
       </a>
     </div>
     {%- if rv.size > 0 %}
-    <div class="reviews scroller">
+    <div class="reviews">
       {%- for r in rv limit: 6 %}
       <blockquote class="review"{% if r.lang != lang %} lang="{{ r.lang }}"{% endif %}>
         <div class="stars" aria-label="{{ r.stars }}/5">{% for s in (1..r.stars) %}★{% endfor %}</div>
@@ -155,7 +155,7 @@
 <section class="section booking" id="reservation">
   <div class="container booking-grid">
     <div class="booking-copy reveal">
-      <p class="eyebrow"><span class="emo" aria-hidden="true">📅</span>{{ t.booking_eyebrow }}</p>
+      <p class="eyebrow">{% include ui-icon.html name="calendar" %}{{ t.booking_eyebrow }}</p>
       <h2 class="h2">{{ t.booking_title }}</h2>
       <p class="lead">{{ t.booking_lead }}</p>
       <ol class="steps">
@@ -166,8 +166,8 @@
     </div>
     <div class="booking-card reveal">
       <p class="booking-card-k">{{ t.booking_online }}</p>
-      <a class="btn btn-dark btn-block" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book_long }}</a>
-      <a class="btn btn-line btn-block" href="tel:{{ b.phone }}" data-track="call_click"><span class="emo" aria-hidden="true">📞</span>{{ b.phone_display }}</a>
+      <a class="btn btn-dark btn-block" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
+      <a class="btn btn-line btn-block" href="tel:{{ b.phone }}" data-track="call_click">{% include ui-icon.html name="phone" %}{{ b.phone_display }}</a>
       <div class="booking-card-hours">
         <p class="booking-card-k">{{ t.hours }}</p>
         {% include hours.html %}
@@ -187,12 +187,12 @@
   <div class="container">
     <header class="section-head section-head-row reveal">
       <div>
-        <p class="eyebrow"><span class="emo" aria-hidden="true">🌸</span>{{ t.journal_eyebrow }}</p>
+        <p class="eyebrow">{% include ui-icon.html name="flower" %}{{ t.journal_eyebrow }}</p>
         <h2 class="h2">{{ t.journal_title }}</h2>
       </div>
       <a class="link-quiet" href="{{ '/blog/' | relative_url }}">{{ t.journal_all }} →</a>
     </header>
-    <div class="posts scroller">
+    <div class="posts">
       {%- for post in site.posts limit: 3 %}
       {% include post-card.html post=post %}
       {%- endfor %}
@@ -214,8 +214,8 @@
         <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ b.email }}">{{ b.email }}</a></dd></div>
       </dl>
       <div class="hero-cta">
-        <a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book_long }}</a>
-        <a class="btn btn-line" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">📍 {{ t.directions }}</a>
+        <a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
+        <a class="btn btn-line" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{% include ui-icon.html name="pin" %}{{ t.directions }}</a>
       </div>
     </div>
     <div class="visit-media reveal">
@@ -226,7 +226,7 @@
       {%- endif %}
     <div class="map">
       <iframe title="Google Maps — Ongles Sakura Spa" src="https://www.google.com/maps/d/embed?mid=1bHoT0EP__Rl_4ae14xxcE_weCtFx1LM&ehbc=2E312F" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <a class="map-tap" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">📍 {{ t.directions }}</a>
+      <a class="map-tap" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{% include ui-icon.html name="pin" %}{{ t.directions }}</a>
     </div>
     </div>
   </div>

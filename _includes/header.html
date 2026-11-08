@@ -3,7 +3,7 @@
 {%- if lang == 'fr' -%}{%- assign other = 'en' -%}{%- else -%}{%- assign other = 'fr' -%}{%- endif -%}
 {%- if site.announcement[lang] and site.announcement[lang] != "" %}
 <div class="announce">
-  <a href="{{ t.home_url | relative_url }}#promotion">{{ site.announcement[lang] }}</a>
+  <a href="{{ t.home_url | relative_url }}#promotion">{% include ui-icon.html name="cap" %}{{ site.announcement[lang] }}</a>
 </div>
 {%- endif %}
 <header class="site-header" data-header>
@@ -20,10 +20,10 @@
         <li><a href="{{ t.home_url | relative_url }}#contact">{{ t.nav_contact }}</a></li>
         <li class="nav-lang"><a href="{{ switch_url | relative_url }}" hreflang="{{ other }}" lang="{{ other }}" aria-label="{{ t.other_lang_label }}">{{ t.other_lang }}</a></li>
       </ul>
-      <a class="btn btn-dark nav-book" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click"><span class="emo" aria-hidden="true">📅</span>{{ t.book_long }}</a>
+      <a class="btn btn-dark nav-book" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
       <div class="nav-extra">
-        <a href="tel:{{ b.phone }}" data-track="call_click">📞 {{ b.phone_display }}</a>
-        <a href="{{ b.google_maps_url }}" target="_blank" rel="noopener">📍 {{ b.street }}</a>
+        <a href="tel:{{ b.phone }}" data-track="call_click">{% include ui-icon.html name="phone" %}{{ b.phone_display }}</a>
+        <a href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{% include ui-icon.html name="pin" %}{{ b.street }}</a>
         <a href="{{ b.instagram }}" target="_blank" rel="noopener">Instagram @onglessakura</a>
       </div>
     </nav>

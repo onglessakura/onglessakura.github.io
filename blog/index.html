@@ -7,7 +7,7 @@ description: "Conseils d'entretien des ongles et des cils, tendances nail art et
 {%- assign lang = page.lang -%}{%- assign t = site.data.i18n[lang] -%}
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow"><span class="emo" aria-hidden="true">🌸</span>{{ t.journal_eyebrow }} · Journal</p>
+    <p class="eyebrow">{% include ui-icon.html name="flower" %}{{ t.journal_eyebrow }} · Journal</p>
     <h1 class="h1">{{ t.journal_title }} <em class="muted-em">/ Tips &amp; inspiration</em></h1>
     <p class="lead narrow">{{ t.blog_lead }}</p>
   </div>
