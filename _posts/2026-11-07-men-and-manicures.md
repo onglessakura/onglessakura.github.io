@@ -2,6 +2,8 @@
 title: "Men and manicures: why more men are booking nail care"
 description: "From Harry Styles to Bad Bunny, painted and well-groomed nails are now part of men's style. Why more men book manicures, and what a classic men's manicure includes."
 lang: en
+image: /assets/img/covers/men-and-manicures.jpg
+image_alt: "Illustration: gold line icons on ink, Men & manicures"
 tags: [men, trends]
 ---
 

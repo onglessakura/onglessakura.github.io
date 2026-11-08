@@ -4,24 +4,17 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">{{ t.hero_eyebrow }}</p>
       <h1 class="hero-title">
         <span class="hero-brand"><span class="hb-line">Ongles</span> <span class="hb-line"><em>Sakura</em><span class="hero-flower" aria-hidden="true">🌸</span></span></span>
-        <span class="hero-sub">{{ t.hero_h1_sub }}</span>
       </h1>
       <p class="lead">{{ t.hero_lead }}</p>
       <div class="hero-cta">
         <a class="btn btn-line" href="#services">{% include ui-icon.html name="sparkle" %}{{ t.hero_secondary }}</a>
       </div>
       {%- assign rg = b.ratings.google %}
-      <a class="hero-rating" href="{{ rg.url }}" target="_blank" rel="noopener">
-        <span class="trust-stars" aria-hidden="true">★★★★★</span>
-        <span><strong>{% include score.html s=rg.score %}</strong> · {{ rg.count }} {{ t.trust_google }}</span>
-      </a>
       <ul class="hero-meta">
+        <li><a href="{{ rg.url }}" target="_blank" rel="noopener"><span class="trust-stars" aria-hidden="true">★★★★★</span> <strong>{% include score.html s=rg.score %}</strong> · {{ rg.count }} {{ t.trust_google }}</a></li>
         <li class="open-status" data-open-status data-hours='{{ b.hours | jsonify | escape }}'>{{ t.seven_days }}</li>
-        <li><a href="tel:{{ b.phone }}" data-track="call_click">{{ b.phone_display }}</a></li>
-        <li>{% if lang == 'fr' %}Métro{% else %}Metro{% endif %} {{ b.metro }}</li>
       </ul>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -52,9 +45,7 @@
 <section class="section" id="services">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow">{% include ui-icon.html name="nail" %}{{ t.services_eyebrow }}</p>
       <h2 class="h2">{{ t.services_title }}</h2>
-      <p class="lead narrow">{{ t.services_lead }}</p>
     </header>
     <div class="services">
       {%- for s in site.data.services %}
@@ -76,16 +67,6 @@
   </div>
 </section>
 
-<!-- ═══ OFFER ═══ -->
-<section class="offer" id="promotion">
-  <div class="container offer-inner reveal">
-    <p class="offer-emoji">{% include ui-icon.html name="cap" %}</p>
-    <p class="eyebrow eyebrow-light">{{ t.offer_eyebrow }}</p>
-    <h2 class="h2">{{ t.offer_title }}</h2>
-    <p>{{ t.offer_text }}</p>
-  </div>
-</section>
-
 <!-- ═══ GALLERY PREVIEW (shown once there are at least 4 photos) ═══ -->
 {%- assign gcount = site.data.gallery.remote.size | default: 0 -%}
 {%- for f in site.static_files -%}{%- if f.path contains "/assets/gallery/" -%}{%- assign ext = f.extname | downcase -%}{%- if ext == ".jpg" or ext == ".jpeg" or ext == ".webp" or ext == ".png" or ext == ".avif" -%}{%- assign gcount = gcount | plus: 1 -%}{%- endif -%}{%- endif -%}{%- endfor -%}
@@ -93,9 +74,7 @@
 <section class="section" id="galerie">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow">{% include ui-icon.html name="sparkle" %}{{ t.gallery_eyebrow }}</p>
       <h2 class="h2">{{ t.gallery_title }}</h2>
-      <p class="lead narrow">{{ t.gallery_lead }}</p>
     </header>
     <div class="gallery-preview">{% include gallery-grid.html limit=8 min=4 %}</div>
     <p class="center gap-top cta-row">
@@ -112,9 +91,7 @@
 <section class="section section-tint" id="avis">
   <div class="container">
     <header class="section-head reveal">
-      <p class="eyebrow">{{ t.reviews_eyebrow }}</p>
       <h2 class="h2">{{ t.reviews_title }}</h2>
-      <p class="lead narrow">{{ t.reviews_lead }}</p>
     </header>
     <div class="scores reveal">
       <a class="score score-main" href="{{ rg.url }}" target="_blank" rel="noopener">
@@ -129,7 +106,7 @@
     </div>
     {%- if rv.size > 0 %}
     <div class="reviews">
-      {%- for r in rv limit: 6 %}
+      {%- for r in rv limit: 3 %}
       <blockquote class="review"{% if r.lang != lang %} lang="{{ r.lang }}"{% endif %}>
         <div class="stars" aria-label="{{ r.stars }}/5">{% for s in (1..r.stars) %}★{% endfor %}</div>
         <p>{% if r.lang == 'fr' %}«&nbsp;{{ r.text }}&nbsp;»{% else %}“{{ r.text }}”{% endif %}</p>
@@ -151,7 +128,6 @@
   <div class="container">
     <header class="section-head section-head-row reveal">
       <div>
-        <p class="eyebrow">{% include ui-icon.html name="flower" %}{{ t.journal_eyebrow }}</p>
         <h2 class="h2">{{ t.journal_title }}</h2>
       </div>
       <a class="link-quiet" href="{{ '/blog/' | relative_url }}">{{ t.journal_all }} →</a>
@@ -169,7 +145,6 @@
 <section class="section section-tint" id="contact">
   <div class="container visit">
     <div class="visit-info reveal">
-      <p class="eyebrow">{{ t.visit_eyebrow }}</p>
       <h2 class="h2">{{ t.visit_title }}</h2>
       <dl class="facts">
         <div><dt>{{ t.address }}</dt><dd>{{ b.street }}<br>{{ b.city }} ({{ b.region }}) {{ b.postal }}<br><span class="muted">{% if lang == 'fr' %}Métro{% else %}Metro{% endif %} {{ b.metro }}</span></dd></div>
@@ -182,11 +157,6 @@
       </div>
     </div>
     <div class="visit-media reveal">
-      {%- if b.storefront_photo %}
-      <figure class="storefront">
-        <img src="{{ b.storefront_photo }}=w1200-h900-k-no" srcset="{{ b.storefront_photo }}=w800-h600-k-no 800w, {{ b.storefront_photo }}=w1600-h1200-k-no 1600w" sizes="(min-width: 861px) 50vw, 100vw" width="1200" height="900" alt="{{ t.storefront_alt }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      </figure>
-      {%- endif %}
     <div class="map">
       <iframe title="Google Maps — Ongles Sakura Spa" src="https://www.google.com/maps/d/embed?mid=1bHoT0EP__Rl_4ae14xxcE_weCtFx1LM&ehbc=2E312F" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <a class="map-tap" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{% include ui-icon.html name="pin" %}{{ t.directions }}</a>
@@ -196,10 +166,9 @@
 </section>
 
 <!-- ═══ FAQ ═══ -->
-<section class="section">
+<section class="section" id="faq">
   <div class="container narrow-wrap">
     <header class="section-head reveal">
-      <p class="eyebrow">{{ t.faq_eyebrow }}</p>
       <h2 class="h2">{{ t.faq_title }}</h2>
     </header>
     <div class="faq">

@@ -49,11 +49,11 @@
   icon: lotus
   fr:
     name: Head Spa
-    text: Rituel japonais de nettoyage et de massage du cuir chevelu, profondément relaxant.
+    text: Rituel de nettoyage et de massage du cuir chevelu, profondément relaxant.
     items: [Nettoyage du cuir chevelu, Massage crânien, Soin capillaire]
   en:
     name: Head Spa
-    text: A deeply relaxing Japanese-inspired scalp cleansing and massage ritual.
+    text: A deeply relaxing scalp cleansing and massage ritual.
     items: [Scalp cleanse, Head massage, Hair treatment]
 
 - id: waxing

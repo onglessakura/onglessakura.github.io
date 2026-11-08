@@ -3,14 +3,14 @@
 {%- if lang == 'fr' -%}{%- assign other = 'en' -%}{%- else -%}{%- assign other = 'fr' -%}{%- endif -%}
 {%- if site.announcement[lang] and site.announcement[lang] != "" %}
 <div class="announce">
-  <a href="{{ t.home_url | relative_url }}#promotion">{% include ui-icon.html name="cap" %}{{ site.announcement[lang] }}</a>
+  <a href="{{ t.home_url | relative_url }}#faq">{% include ui-icon.html name="cap" %}{{ site.announcement[lang] }}</a>
 </div>
 {%- endif %}
 <header class="site-header" data-header>
   <div class="container header-inner">
     <a class="brand" href="{{ t.home_url | relative_url }}" aria-label="Ongles Sakura Spa — {{ t.lang_name }}">
       {% include logo.html %}
-      <span class="brand-text">Ongles Sakura<small>Spa · Montréal</small></span>
+      <span class="brand-text">Ongles Sakura Spa<small>{{ t.brand_tagline }}</small></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="{{ t.menu }}">
       <ul class="nav-links">
