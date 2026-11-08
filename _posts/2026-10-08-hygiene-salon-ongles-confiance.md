@@ -2,6 +2,8 @@
 title: "L'hygiène avant tout : ce qui fait un salon d'ongles de confiance"
 description: "Outils désinfectés, limes à usage unique, espace impeccable : découvrez les standards d'hygiène qui font la différence dans un salon d'ongles au centre-ville de Montréal."
 lang: fr
+image: /assets/gallery/ongles/07-french-blanche-amande.jpg
+image_alt: "French blanche classique réalisée chez Ongles Sakura Spa"
 tags: [hygiène, santé des ongles]
 ---
 

@@ -2,6 +2,8 @@
 title: "Des ongles en santé : nos conseils pour les garder forts entre deux visites"
 description: "Ongles cassants, cuticules sèches ? Nos conseils simples pour garder des ongles forts et en santé au quotidien, et le rôle d'un soin professionnel régulier."
 lang: fr
+image: /assets/gallery/ongles/09-rose-nude-amande.jpg
+image_alt: "Ongles rose nude en santé, forme amande"
 tags: [santé des ongles, conseils]
 ---
 

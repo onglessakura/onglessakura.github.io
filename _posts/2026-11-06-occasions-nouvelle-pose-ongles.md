@@ -2,6 +2,8 @@
 title: "8 occasions parfaites pour s'offrir une nouvelle pose d'ongles"
 description: "Mariage, Fêtes, entrevue, vacances, anniversaire : les meilleures occasions pour une nouvelle manucure, et nos conseils pour bien planifier votre rendez-vous."
 lang: fr
+image: /assets/gallery/ongles/03-nail-art-bordeaux-fleurs.jpg
+image_alt: "Nail art bordeaux et fleurs pour une occasion spéciale"
 tags: [inspiration, occasions]
 ---
 

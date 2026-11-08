@@ -29,8 +29,6 @@ business:
   country: CA
   metro: Place-des-Arts
   booking_url: https://onglessakura.setmore.com
-  # Setmore page embedded in the "Réservation" section (leave "" to hide the section)
-  booking_embed_url: ""      # was https://onglessakura.setmore.com/#reviews (embed removed for speed)
   instagram: https://www.instagram.com/onglessakura
   # Paste your Google Maps share link and "Get more reviews" link here:
   google_maps_url: https://maps.google.com/?cid=18003722729717811053   # your Google Business Profile

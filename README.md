@@ -14,7 +14,6 @@ Jekyll site hosted free on GitHub Pages. Everything below can be done from the G
 | Edit FAQ and other page text | `_data/i18n.yml` (`fr:` and `en:`) |
 | Update review scores (Google 5.0 / Setmore 4.9) | `_config.yml` → `business: ratings:` (refresh every month or two) |
 | Change the client quotes | `_data/reviews.yml` (copy word for word, first name + initial) |
-| Show the Setmore booking page inside the site again | `_config.yml` → `booking_embed_url:` |
 
 ## Add gallery photos
 The home page shows the gallery once there are **4 or more photos**. It currently holds 11 photos from @onglessakura on Instagram (in `assets/gallery/ongles/` and `assets/gallery/cils/`), shown in the category order set in `_data/gallery.yml`. Inside a folder, files are sorted by name, so the `01-`, `02-` prefixes control the order.

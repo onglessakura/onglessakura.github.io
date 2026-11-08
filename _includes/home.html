@@ -1,5 +1,4 @@
 {%- assign b = site.business -%}
-{%- assign book_href = b.booking_url -%}
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
@@ -12,7 +11,6 @@
       </h1>
       <p class="lead">{{ t.hero_lead }}</p>
       <div class="hero-cta">
-        <a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
         <a class="btn btn-line" href="#services">{% include ui-icon.html name="sparkle" %}{{ t.hero_secondary }}</a>
       </div>
       {%- assign rg = b.ratings.google %}
@@ -36,8 +34,6 @@
   </div>
   <canvas class="petals" data-petals aria-hidden="true"></canvas>
 </section>
-
-{% include trust-bar.html %}
 
 <!-- ═══ PILLARS ═══ -->
 <section class="pillars" aria-label="Ongles Sakura Spa">
@@ -77,7 +73,6 @@
       </details>
       {%- endfor %}
     </div>
-    <p class="center"><a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a></p>
   </div>
 </section>
 
@@ -88,7 +83,6 @@
     <p class="eyebrow eyebrow-light">{{ t.offer_eyebrow }}</p>
     <h2 class="h2">{{ t.offer_title }}</h2>
     <p>{{ t.offer_text }}</p>
-    <a class="btn btn-light" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book }}</a>
   </div>
 </section>
 
@@ -151,36 +145,6 @@
   </div>
 </section>
 
-<!-- ═══ BOOKING ═══ -->
-<section class="section booking" id="reservation">
-  <div class="container booking-grid">
-    <div class="booking-copy reveal">
-      <p class="eyebrow">{% include ui-icon.html name="calendar" %}{{ t.booking_eyebrow }}</p>
-      <h2 class="h2">{{ t.booking_title }}</h2>
-      <p class="lead">{{ t.booking_lead }}</p>
-      <ol class="steps">
-        <li><span>01</span>{{ t.booking_step1 }}</li>
-        <li><span>02</span>{{ t.booking_step2 }}</li>
-        <li><span>03</span>{{ t.booking_step3 }}</li>
-      </ol>
-    </div>
-    <div class="booking-card reveal">
-      <p class="booking-card-k">{{ t.booking_online }}</p>
-      <a class="btn btn-dark btn-block" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
-      <a class="btn btn-line btn-block" href="tel:{{ b.phone }}" data-track="call_click">{% include ui-icon.html name="phone" %}{{ b.phone_display }}</a>
-      <div class="booking-card-hours">
-        <p class="booking-card-k">{{ t.hours }}</p>
-        {% include hours.html %}
-        <span class="open-status open-status-sm" data-open-status data-hours='{{ b.hours | jsonify | escape }}'></span>
-      </div>
-      <a class="booking-card-rating" href="{{ b.ratings.setmore.url }}" target="_blank" rel="noopener"><span class="trust-stars" aria-hidden="true">★★★★★</span> {% include score.html s=b.ratings.setmore.score %} · {{ b.ratings.setmore.count }} {{ t.trust_setmore }}</a>
-    </div>
-  </div>
-  {%- if b.booking_embed_url and b.booking_embed_url != "" %}
-  <div class="container"><div class="booking-frame gap-top"><iframe title="Setmore — {{ t.book_long }}" src="{{ b.booking_embed_url }}" loading="lazy" allow="payment"></iframe></div></div>
-  {%- endif %}
-</section>
-
 <!-- ═══ JOURNAL ═══ -->
 {%- if site.posts.size > 0 %}
 <section class="section">
@@ -214,7 +178,6 @@
         <div><dt>{{ t.email }}</dt><dd><a href="mailto:{{ b.email }}">{{ b.email }}</a></dd></div>
       </dl>
       <div class="hero-cta">
-        <a class="btn btn-dark" href="{{ book_href }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
         <a class="btn btn-line" href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{% include ui-icon.html name="pin" %}{{ t.directions }}</a>
       </div>
     </div>

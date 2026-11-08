@@ -13,7 +13,6 @@
     ticking = false;
     const y = window.scrollY;
     header && header.classList.toggle("is-scrolled", y > 8);
-    bar && bar.classList.toggle("is-visible", y > 380);
   };
   window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
   onScroll();

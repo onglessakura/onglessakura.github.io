@@ -20,7 +20,6 @@
         <li><a href="{{ t.home_url | relative_url }}#contact">{{ t.nav_contact }}</a></li>
         <li class="nav-lang"><a href="{{ switch_url | relative_url }}" hreflang="{{ other }}" lang="{{ other }}" aria-label="{{ t.other_lang_label }}">{{ t.other_lang }}</a></li>
       </ul>
-      <a class="btn btn-dark nav-book" href="{{ b.booking_url }}" target="_blank" rel="noopener" data-track="book_click">{% include ui-icon.html name="calendar" %}{{ t.book_long }}</a>
       <div class="nav-extra">
         <a href="tel:{{ b.phone }}" data-track="call_click">{% include ui-icon.html name="phone" %}{{ b.phone_display }}</a>
         <a href="{{ b.google_maps_url }}" target="_blank" rel="noopener">{% include ui-icon.html name="pin" %}{{ b.street }}</a>

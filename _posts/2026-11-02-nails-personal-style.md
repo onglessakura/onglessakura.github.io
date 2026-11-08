@@ -2,6 +2,8 @@
 title: "Your nails, your signature: how a fresh set elevates your personal style"
 description: "Polished nails are the finishing touch of any look. How to choose shape, length and colour to match your style, and fit it all into a busy downtown Montréal schedule."
 lang: en
+image: /assets/gallery/ongles/06-nail-art-bleu-nuit.jpg
+image_alt: "Midnight blue nail art done at Ongles Sakura Spa"
 tags: [style, inspiration]
 ---
 
